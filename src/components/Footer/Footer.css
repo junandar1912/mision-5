@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 120px;
+    gap: 20px;
+    width: 100%;
+    height: 427px;
+    border: 1px solid #3A35411F;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 60px 120px;
+}
+
+img {
+    width: 204px;
+    height: 56px;
+}
+
+h1 {
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 18px;
+    color: #222325;
+}
+
+p {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 16px;
+    color: #222325;
+}
+
+.alamat {
+    display: flex;
+    flex-direction: column;
+    width: 352px;
+    height: 190px;
+    gap: 18px;
+}
+
+.nav-footer{
+    list-style-type: none;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1200px;
+    height: 199px;
+}
+
+.navigator {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    width: 485px;
+    height: 199px;
+    gap: 48px;
+}
+
+.isi-navigator a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration-line: none;
+    overflow: auto;
+    padding: 0px;
+    gap: 15px;
+    font-family: "DM Sans";
+    font-size: 16px;
+   color: rgba(51, 51, 51, 0.68);
+}
+
+.nav {
+    border: transparent;
+    background-color: transparent;
+    text-decoration-line: none;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.divider {
+    align-items: center;
+    font-size: 16px;
+    display: flex;
+    height: 2px;
+    width: 100%;
+    margin-bottom: 36px;
+  }
+  
+  .divider::before, .divider::after {
+    flex: 1;
+    content: '';
+    padding: 1px;
+    background-color: rgb(104, 102, 102);
+  }
+
+  .media-sosial {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 35px;
+}
+
+.media {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    border: 1px solid transparent;
+    height: 35px;
+    gap: 15px;
+}
+

@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background-color: #FFFDF3;
+    font-family: 'Poppins', 'Dm sans';
+    justify-items: center;
+    padding-top: 163px;
+    padding-bottom: 163px; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 36px;
+    gap: 36px;
+    height: 617px;
+    width: 590px;
+    background-color: #ffff;
+}
+
+.tittle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 67px;
+    gap: 10px;
+}
+
+.h1 {
+    font-family: 'Poppins';
+    font-size: 38px;
+    font-weight: 600;
+    color: #222325;
+}
+
+.ke-2 {
+    font-family: 'Dm sans';
+    font-weight: 400;
+    font-size: 16px;
+    color: #333333AD;
+}
+
+.my-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 944px;
+}
+
+.tombol {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    height: 100px;
+}
+
+input {
+    width: 100%;
+    height: 42px;
+    border: 1px solid #F1F1F1;
+    border-radius: 10px;
+}
+
+span {
+    color: red;
+}
+
+button {
+    align-items: center;
+    width: 100%;
+    height: 42px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.masuk {
+    background-color: #3ECF4C;
+    color: #FFFFFF;
+}
+
+.daftar {
+    background-color: #E2FCD9CC;
+    color: #3ECF4C;
+}
+
+.google {
+    border: 1px solid #F1F1F1;
+    justify-items: center;
+}
+
+.isi {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 8px 26px;
+    gap: 8px;
+    width: 249px;
+    height: 38px;
+}
+
+.btn-g {
+    width: 15px;
+    height: 20px;
+}
+
+a {
+    align-self: flex-end;
+    color: #333333AD;
+}
