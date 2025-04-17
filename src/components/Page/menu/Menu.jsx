@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from '../../Header/Header'
+import Footer from '../../Footer/Footer'
 import './Menu.css'
 
 const Menu = () => {
   return (
+    <>
+    <Header/>
     <body>
         <div className='head'>
             <div className='paragraf'>
@@ -40,6 +44,8 @@ const Menu = () => {
           </div>
         </footer>
     </body>
+    <Footer/>
+    </>
   )
 }
 

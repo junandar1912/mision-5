@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from '../../Header/Header'
 import './Registrasi.css'
 
 const Registrasi = () => {
   return (
+    <>
+    <Header/>
     <div className='body'>
       <div className='main'>
         <div className='tittle'>
@@ -45,6 +48,7 @@ const Registrasi = () => {
         </button>
       </div>
     </div>
+    </>
   )
 }
 

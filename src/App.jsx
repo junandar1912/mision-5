@@ -5,7 +5,9 @@ import Menu from "./components/Page/menu/Menu"
 import Login from "./components/Page/Login/Login";
 import Registrasi from "./components/Page/Registrasi/Registrasi";
 
+
 const root = document.getElementById("root");
+
 
 ReactDOM.createRoot(root).render(
   <BrowserRouter>

@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from '../../Header/Header.jsx'
 import './Login.css'
 
 const Login = () => {
   return (
+    <>
+    <Header/>
     <div className='body'>
       <div className='container'>
         <div className='tittle'>
@@ -29,6 +32,7 @@ const Login = () => {
         </button>
       </div>
     </div>
+    </>
   )
 }
 
