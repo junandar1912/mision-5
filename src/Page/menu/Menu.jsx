@@ -6,8 +6,8 @@ import './Menu.css'
 const Menu = () => {
   return (
     <>
-    <Header/>
-    <body>
+    <Header />
+    <div className='body'>
         <div className='head'>
             <div className='paragraf'>
                 <h1 className='p1-head'>Revolusi Pembelajaran: Temukan Ilmu Baru melalui Platform Video Interaktif!</h1>
@@ -43,8 +43,8 @@ const Menu = () => {
             </div>
           </div>
         </div>
-    </body>
-    <Footer/>
+    </div>
+    <Footer />
     </>
   )
 }
