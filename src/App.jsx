@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
-import Menu from "./components/Page/menu/Menu"
-import Login from "./components/Page/Login/Login";
-import Registrasi from "./components/Page/Registrasi/Registrasi";
+import Menu from "./Page/menu/Menu.jsx";
+import Registrasi from "./Page/Registrasi/Registrasi.jsx";
+import Login from "./Page/Login/Login.jsx";
+import Detail from "./Page/Detail-produk/Detail.jsx";
 
 
 const root = document.getElementById("root");
@@ -15,6 +16,7 @@ ReactDOM.createRoot(root).render(
       <Route path="/" element={<Menu />} />
       <Route path="Registrasi" element={<Registrasi />} />
       <Route path="login" element={<Login />} />
+      <Route path="Detail" element={<Detail />}/>
     </Routes>
   </BrowserRouter>
 );
