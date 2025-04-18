@@ -17,6 +17,7 @@ const Login = () => {
           <input type="text"/>
           <label htmlFor="password">Kata Sandi<span>*</span></label>
           <input type="password" />
+          <span className='icon-toogle'><i className='fas fa-eye-slash'></i></span>
           <a href="http://">Lupa Password?</a>
         <div className='tombol'>
           <button type='submit' className='masuk'>Masuk</button>
@@ -26,8 +27,8 @@ const Login = () => {
         <span className='divider' ><p>atau</p></span>
         <button className='google' type='submit'>
           <div className='isi'>
-           <img src="./src/assets/gambar/logos_google-icon.svg" alt="button" className='btn-g'/>
-           <p>Masuk dengan Google</p>
+           <img src="./src/assets/gambar/logos_google-icon.svg" alt="button" className='img-g'/>
+           <p className='p-google'>Masuk dengan Google</p>
           </div>
         </button>
       </div>

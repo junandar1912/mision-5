@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../../Header/Header'
-import Footer from '../../Footer/Footer'
+import Header from '../../Header/Header.jsx'
+import Footer from '../../Footer/Footer.jsx'
 import './Menu.css'
 
 const Menu = () => {
@@ -28,7 +28,7 @@ const Menu = () => {
             <a href="http://">Bisnis</a>
           </div>
         </main>
-        <footer>
+        <div className='footer-container'>
           <div className='fot-con'>
             <div className='judul-fot'>
               <p className='p1-fot'>NEWSLETTER</p>
@@ -42,7 +42,7 @@ const Menu = () => {
               <button type='submit' className='ctr-butt'>Subscribe</button>
             </div>
           </div>
-        </footer>
+        </div>
     </body>
     <Footer/>
     </>

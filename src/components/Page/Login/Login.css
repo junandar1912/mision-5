@@ -7,18 +7,15 @@
 .body {
     background-color: #FFFDF3;
     font-family: 'Poppins', 'Dm sans';
-    justify-items: center;
-    padding-top: 163px;
-    padding-bottom: 163px; 
+    justify-items: center; 
 }
 
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 36px;
-    gap: 36px;
-    height: 617px;
+    padding: 46px;
+    height: 650px;
     width: 590px;
     background-color: #ffff;
 }
@@ -49,7 +46,6 @@
 .my-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     width: 100%;
     height: 944px;
 }
@@ -57,7 +53,7 @@
 .tombol {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 16px;
     width: 100%;
     height: 100px;
 }
@@ -69,12 +65,41 @@ input {
     border-radius: 10px;
 }
 
+.icon-toogle {
+    position: absolute;
+    right: 37.5%;
+    top: 54%;
+    height: 24px;
+    width: 24px;
+    color: #222325;
+    cursor: pointer;
+}
+
 span {
     color: red;
 }
 
+
+a {
+    align-self: flex-end;
+    color: #333333AD;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.tombol {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
 button {
+    cursor: pointer;
+}
+
+.masuk {
     align-items: center;
+    background-color: #3ECF4C;
+    color: #FFFFFF;
     width: 100%;
     height: 42px;
     border: 1px solid transparent;
@@ -82,37 +107,45 @@ button {
     cursor: pointer;
 }
 
-.masuk {
-    background-color: #3ECF4C;
-    color: #FFFFFF;
-}
-
 .daftar {
+    align-items: center;
     background-color: #E2FCD9CC;
     color: #3ECF4C;
+    width: 100%;
+    height: 42px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.divider::before, .divider::after {
+    gap: 10px;
+    width: 100%;
+    background-color: rgba(241, 241, 241, 1);
 }
 
 .google {
+    background-color: #FFFFFF;
     border: 1px solid #F1F1F1;
-    justify-items: center;
+    border-radius: 10px;
 }
 
 .isi {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-items: center;
     padding: 8px 26px;
-    gap: 8px;
-    width: 249px;
-    height: 38px;
+    justify-content: space-around;
+    gap: 10px;
 }
 
-.btn-g {
+.img-g {
     width: 15px;
     height: 20px;
 }
 
-a {
-    align-self: flex-end;
-    color: #333333AD;
+.p-google {
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 15px;
 }

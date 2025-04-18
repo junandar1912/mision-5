@@ -79,7 +79,7 @@ main {
 
 
 
-footer {
+.footer-container {
     display: flex;
     flex-direction: column;
     height: 400px;
@@ -88,6 +88,7 @@ footer {
     background: linear-gradient(#000000CC), url("../../../assets/gambar/background2.jpg");
     background-position: center;
     background-size: cover;
+    justify-content: center;
 }
 
 .fot-con {

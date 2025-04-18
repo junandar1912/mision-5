@@ -42,7 +42,7 @@ const Registrasi = () => {
         <div className='divider'><span>atau</span></div>
         <button className='btn-g' type='submit'>
           <div className='btn'>
-            <img src="./src/assets/gambar/logos_google-icon.svg" alt="btn-g" />
+            <img src="./src/assets/gambar/logos_google-icon.svg" alt="btn-g" className='i-google'/>
             <p className='titel'>Masuk dengan google</p>
           </div>
         </button>
