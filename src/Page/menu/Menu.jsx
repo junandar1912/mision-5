@@ -1,7 +1,110 @@
 import React from 'react'
 import Header from '../../components/Header/Header.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
+import Card from '../../components/Card/Card.jsx'
 import './Menu.css'
+
+const cardData = [
+  {
+  image:"../src/assets/gambar/photo 1.svg",
+  title:"Big 4 Auditor Financial Analyst ",
+  description:"Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
+  avatar:"../src/assets/gambar/avatar/avatar(1).svg",
+  instructor:"Jenna Ortega",
+  rating:"3,5",
+  reviews:"86",
+  price:"RP 300K",
+  job:"Senior Accountant"
+},
+{
+  image:"../src/assets/gambar/photo2.svg",
+  title:"Big 4 Auditor Financial Analyst ",
+  description:"Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
+  avatar:"../src/assets/gambar/avatar/avatar(2).svg",
+  instructor:"Jenna Ortega",
+  rating:"3,5",
+  reviews:"86",
+  price:"RP 300K",
+  job:"Senior Accountant"
+},
+{
+  image:"../src/assets/gambar/photo3.svg",
+  title:"Big 4 Auditor Financial Analyst ",
+  description:"Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
+  avatar:"../src/assets/gambar/avatar/avatar(3).svg",
+  instructor:"Jenna Ortega",
+  rating:"3,5",
+  reviews:"86",
+  price:"RP 300K",
+  job:"Senior Accountant"
+},
+{
+  image:"../src/assets/gambar/photo4.svg",
+  title:"Big 4 Auditor Financial Analyst ",
+  description:"Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
+  avatar:"../src/assets/gambar/avatar/avatar(4).svg",
+  instructor:"Jenna Ortega",
+  rating:"3,5",
+  reviews:"86",
+  price:"RP 300K",
+  job:"Senior Accountant"
+},
+{
+  image:"../src/assets/gambar/photo5.svg",
+  title:"Big 4 Auditor Financial Analyst ",
+  description:"Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
+  avatar:"../src/assets/gambar/avatar/avatar(5).svg",
+  instructor:"Jenna Ortega",
+  rating:"3,5",
+  reviews:"86",
+  price:"RP 300K",
+  job:"Senior Accountant"
+},
+{
+  image:"../src/assets/gambar/photo6.svg",
+  title:"Big 4 Auditor Financial Analyst ",
+  description:"Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
+  avatar:"../src/assets/gambar/avatar/avatar(6).svg",
+  instructor:"Jenna Ortega",
+  rating:"3,5",
+  reviews:"86",
+  price:"RP 300K",
+  job:"Senior Accountant"
+},
+{
+  image:"../src/assets/gambar/photo7.svg",
+  title:"Big 4 Auditor Financial Analyst ",
+  description:"Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
+  avatar:"../src/assets/gambar/avatar/avatar(7).svg",
+  instructor:"Jenna Ortega",
+  rating:"3,5",
+  reviews:"86",
+  price:"RP 300K",
+  job:"Senior Accountant"
+},
+{
+  image:"../src/assets/gambar/photo8.svg",
+  title:"Big 4 Auditor Financial Analyst ",
+  description:"Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
+  avatar:"../src/assets/gambar/avatar/avatar(8).svg",
+  instructor:"Jenna Ortega",
+  rating:"3,5",
+  reviews:"86",
+  price:"RP 300K",
+  job:"Senior Accountant"
+},
+{
+  image:"../src/assets/gambar/photo9.svg",
+  title:"Big 4 Auditor Financial Analyst ",
+  description:"Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
+  avatar:"../src/assets/gambar/avatar/avatar(9).svg",
+  instructor:"Jenna Ortega",
+  rating:"3,5",
+  reviews:"86",
+  price:"RP 300K",
+  job:"Senior Accountant"
+},
+];
 
 const Menu = () => {
   return (
@@ -26,6 +129,25 @@ const Menu = () => {
             <a href="http://">Desain</a>
             <a href="http://">Pengembangan Diri</a>
             <a href="http://">Bisnis</a>
+          </div>
+          <div className='draft'>
+           <ul>
+            {cardData.map((item, index) => (
+              <li key={index}>
+              <Card
+              image={item.image}
+              title={item.title}
+              description={item.description}
+              avatar={item.avatar}
+              instructor={item.instructor}
+              rating={item.rating}
+              reviews={item.reviews}
+              price={item.price}
+              job={item.job}
+              />
+              </li>
+            ))}
+           </ul>
           </div>
         </main>
         <div className='footer-container'>

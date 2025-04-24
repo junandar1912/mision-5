@@ -7,6 +7,7 @@ import Login from "./Page/Login/Login.jsx";
 import Detail from "./Page/Detail-produk/Detail.jsx";
 
 
+
 const root = document.getElementById("root");
 
 

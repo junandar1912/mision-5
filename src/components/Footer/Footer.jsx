@@ -7,7 +7,7 @@ const Footer = () => {
         <footer>
             <div className='nav-footer'>
                 <div className='alamat'>
-                    <img src='./src/assets/gambar/logo.png' alt='logo' />
+                    <img src='../src/assets/gambar/logo.svg' alt='logo' className='img-foot'/>
                     <h1>Gali Potensi Anda Melalui Pembelajaran Video di hariesok.id!</h1>
                     <p>Jl. Usman Effendi No. 50 Lowokwaru, Malang</p>
                     <p>+62-877-7123-1234</p>

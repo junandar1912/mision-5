@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .body {
@@ -76,7 +77,17 @@ main {
     gap: 5%;
 }
 
-
+.draft ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; 
+    list-style: none;
+  }
+  
+  .draft li {
+    display: flex;
+    gap: 10px;
+  }
 
 
 .footer-container {
@@ -153,7 +164,12 @@ main {
 .searching {
     width: 100%;
     height: 100%;
-    border: 1px solid transparent;
+    border: 1px solid #FFFFFF;
+    font-family: 'Poppins';
+}
+
+.searching:focus {
+    outline: none;
 }
 
 .ctr-butt {
@@ -163,4 +179,7 @@ main {
     background-color: #FFBD3A;
     color: #FFFFFF;
     font-family: 'Poppins';
+    border: 1px solid transparent;
+    border-radius: 5px;
+    justify-items: center;
 }
