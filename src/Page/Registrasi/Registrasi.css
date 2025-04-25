@@ -4,15 +4,14 @@
     box-sizing: border-box;
 }
 
-.body {
+.body-regis {
     background-color: #FFFDF3;
     font-family: 'Poppins', 'Dm sans';
     justify-items: center;
-    padding-top: 163px;
-    padding-bottom: 163px; 
+    padding: 5%; 
 }
 
-.main {
+.main-regis {
     background-color: #ffffff;
     width: 590px;
     height: 893px;

@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../../components/Header/Header.jsx'
+import Headermenu from '../../components/Header/Headermenu.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import Card from '../../components/Card/Card.jsx'
 import './Menu.css'
@@ -109,7 +109,7 @@ const cardData = [
 const Menu = () => {
   return (
     <>
-    <Header />
+    <Headermenu />
     <div className='body'>
         <div className='head'>
             <div className='paragraf'>
@@ -118,7 +118,7 @@ const Menu = () => {
             </div>
             <button type='submit' className='btn-p'>Temukan Video Course untuk Dipelajari!</button>
         </div>
-        <main>
+        <div>
           <div className='judul'>
             <h1 className='judul-1'>Koleksi Video Pembelajaran Unggulan</h1>
             <p className='judul-2'>Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!</p>
@@ -149,7 +149,7 @@ const Menu = () => {
             ))}
            </ul>
           </div>
-        </main>
+        </div>
         <div className='footer-container'>
           <div className='fot-con'>
             <div className='judul-fot'>

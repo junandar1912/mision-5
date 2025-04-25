@@ -8,9 +8,9 @@ const Footer = () => {
             <div className='nav-footer'>
                 <div className='alamat'>
                     <img src='../src/assets/gambar/logo.svg' alt='logo' className='img-foot'/>
-                    <h1>Gali Potensi Anda Melalui Pembelajaran Video di hariesok.id!</h1>
-                    <p>Jl. Usman Effendi No. 50 Lowokwaru, Malang</p>
-                    <p>+62-877-7123-1234</p>
+                    <h1 className='foot-titel'>Gali Potensi Anda Melalui Pembelajaran Video di hariesok.id!</h1>
+                    <p className='alamat'>Jl. Usman Effendi No. 50 Lowokwaru, Malang</p>
+                    <p className='no'>+62-877-7123-1234</p>
                 </div>
                 <div className="navigator">
                     <ul className="nav-footer">

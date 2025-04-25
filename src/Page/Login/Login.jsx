@@ -6,8 +6,8 @@ const Login = () => {
   return (
     <>
     <Header/>
-    <div className='body'>
-      <div className='container'>
+    <div className='login-body'>
+      <div className='container-login'>
         <div className='tittle'>
           <p className='h1'>Masuk ke akun</p>
           <p className='ke-2'>Yuk, lanjutin belajarmu di videobelajar.</p>

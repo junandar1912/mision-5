@@ -77,6 +77,10 @@ main {
     gap: 5%;
 }
 
+a {
+    text-decoration: none;
+}
+
 .draft ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

@@ -4,13 +4,14 @@
     box-sizing: border-box;
 }
 
-.body {
+.login-body {
     background-color: #FFFDF3;
     font-family: 'Poppins', 'Dm sans';
     justify-items: center; 
+    padding: 5%;
 }
 
-.container {
+.container-login {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,8 +68,8 @@ input {
 
 .icon-toogle {
     position: absolute;
-    right: 37.5%;
-    top: 54%;
+    right: 35.5%;
+    top: 44%;
     height: 24px;
     width: 24px;
     color: #222325;

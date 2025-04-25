@@ -21,14 +21,14 @@ footer {
     height: 56px;
 }
 
-h1 {
+.foot-titel {
     font-family: 'DM Sans';
     font-weight: 700;
     font-size: 18px;
     color: #222325;
 }
 
-p {
+.alamat .no {
     font-family: 'DM Sans';
     font-weight: 400;
     font-size: 16px;
@@ -49,7 +49,7 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 1200px;
+    width: 65%;
     height: 199px;
 }
 

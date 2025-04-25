@@ -6,8 +6,8 @@ const Registrasi = () => {
   return (
     <>
     <Header/>
-    <div className='body'>
-      <div className='main'>
+    <div className='body-regis'>
+      <div className='main-regis'>
         <div className='tittle'>
           <p className='h1'>Pendaftaran Akun</p>
           <p className='p'>Yuk, daftarkan akunmu sekarang juga!</p>

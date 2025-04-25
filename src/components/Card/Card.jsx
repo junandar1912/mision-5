@@ -17,11 +17,13 @@ const Card = ({image, title, avatar, description, instructor, reviews, rating, p
               </div>
             </div>
             <div className="course-rating">
-              <span className="star">★</span>
-              <span>{rating}</span>
-              <span className="review-count">({reviews})</span>
+              <div className='rating'>
+               <span className="star">★</span>
+               <span>{rating}</span>
+               <span className="review-count">({reviews})</span>
+              </div>
+              <div className="course-price">{price}</div>
             </div>
-            <div className="course-price">{price}</div>
           </div>
         </div>
       );
