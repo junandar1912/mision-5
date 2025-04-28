@@ -1,12 +1,14 @@
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import Login from "./Page/Login/Login";
-import Registrasi from "./Page/Registrasi/Registrasi";
-import Menu from "./Page/menu/Menu";
-import Card from "./components/Card/Card";
+import Header from "./components/Header/Header.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import Login from "./Page/Login/Login.jsx";
+import Registrasi from "./Page/Registrasi/Registrasi.jsx";
+import Menu from "./Page/menu/Menu.jsx";
+import Card from "./components/Card/Card.jsx";
+import Detail from "./Page/Detail-produk/Detail.jsx";
+import Checkbox from "./components/Checkbox/Checkbox.jsx";
 
 
 
 
 
-export { Header, Footer, Login, Registrasi, Menu, Card };
+export { Header, Footer, Login, Registrasi, Menu, Card, Detail, Checkbox };

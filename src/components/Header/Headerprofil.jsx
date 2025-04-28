@@ -1,12 +1,16 @@
 import React from 'react'
-import './Header.css'
+import './Headerprofil.css'
 
-const Header = () => {
+const Header = ({image}) => {
   return (
     <header>
-      <div className='nav'>
-        <div className='logo'>
+      <div className='nav-detail'>
+        <div className='logo-detail'>
           <img src="../src/assets/gambar/logo.svg" className='photo' />
+          <button className='nav-head'>Kategori</button>
+        </div>
+        <div className='avatar-profil'>
+          <img src={image} alt="profil" className='photo-profil'/>
         </div>
       </div>
     </header>
