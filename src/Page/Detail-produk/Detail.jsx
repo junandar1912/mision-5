@@ -1,9 +1,10 @@
-import React from 'react'
-import Header from '../../components/Header/Header.jsx'
+import React, { useRef, useEffect } from 'react'
+import Headerprofile from '../../components/Header/Headerprofil.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import Card from '../../components/Card/Card.jsx'
 import Checkbox from '../../components/Checkbox/Checkbox.jsx'
 import Radio from '../../components/Radio/Radio.jsx'
+import Switch from '../../components/Switch/Switch.jsx'
 import './Detail.css'
 
 const CheckboxData = [
@@ -15,25 +16,38 @@ const CheckboxData = [
   },
 ]
 
+const Radiodata = [{
+  handleradioChange:"kurang$",
+  nami:"kurang dari 4 jam"
+}]
+
+
 const Detail = () => {
   return (
     <>
-    <Header/>
+    <Headerprofile/>
     <div className='body'>
-        <title>
-            <h1>Koleksi Video Pembelajaran Unggulan</h1>
-            <p>Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!</p>
-        </title>
-        <div className='container'>
+        <div className='judul-detail'>
+            <h1 className='j1-detail'>Koleksi Video Pembelajaran Unggulan</h1>
+            <p className='j2-detail'>Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!</p>
+        </div>
+        <div className='container-detail'>
             <div className='desc-but'>
-              {CheckboxData.map((item, index) =>(
-                <Checkbox
-                key={index}
-                Label={item.Label}
-                name={item.nama}
-                defaultChecked={item.defaultChecked}
-                namaCheckbox={item.namaCHeckbox}/>
-              ))}
+              <div className='filter-detail'>
+                <button className='filter-nav'>Filter</button>
+                <button className='Reset-nav'>Reset</button>
+              </div>
+              <div className='desc-nav'>
+                <button className='dropdown-filter'>
+                  <img src="" alt="" />Bidang studi
+                </button>
+                <button className='dropdown-filter'>
+                  <img src="" alt="" />Harga
+                </button>
+                <button className='dropdown-filter'>
+                  <img src="" alt="" />Durasi
+                </button>
+              </div>
             </div>
             <div className='card-section'></div>
         </div>

@@ -4,3 +4,35 @@
     box-sizing: border-box;
 }
 
+.Radio-container {
+    display: flex;
+    flex-direction: column;
+    height: 24px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+}
+
+.Radio-label {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    color: #333333AD;
+}
+
+.radio-switch {
+    height: 20px;
+    width: 20px;
+    appearance: none;
+    background-color: #E2FCD9CC;
+    border: 2px solid #3ecf4c;
+    text-align: center;
+}
+
+.radio-switch:checked {
+    background-color: #3ecf4c;
+    border: 2px solid #3ecf4c;
+    box-shadow: #E2FCD9CC 0px 0px 0px 3px inset ;
+
+}
+
