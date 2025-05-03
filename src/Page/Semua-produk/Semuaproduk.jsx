@@ -90,7 +90,7 @@ const RadioOptions = [
 
 
 
-const Detail = () => {
+const Semuaproduk = () => {
 // tombol dropdown
   const [open, setopen] = useState(false);
 
@@ -268,4 +268,4 @@ const Detail = () => {
   )
 }
 
-export default Detail
+export default Semuaproduk
