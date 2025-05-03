@@ -63,6 +63,31 @@ input {
     border-radius: 6px;
 }
 
+input:focus {
+    outline: none;
+}
+
+.password {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 5px;
+    border: 1px solid #f1f1f1;
+}
+
+.konfirmasi {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 5px;
+    border: 1px solid #f1f1f1;
+}
+
+.password-regis {
+    padding-top: 5px;
+    color: #4A505C;
+}
+/* tombol */
 .tombol {
     gap: 10px;
 }
@@ -85,7 +110,9 @@ button {
     height: 42px;
     display: flex;
     flex-direction: row;
-    border: 1px solid #3A35411F;
+    border: 1px solid #f1f1f1;
+    background-color: #FFFFFF;
+    padding: 10px;
 }
 
 .btn{
@@ -99,3 +126,33 @@ button {
     font-weight: 700;
 }
 
+.p-span {
+    color: #4A505C;
+    margin: 20px;
+}
+
+/*no hp */
+
+.selection {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: transparent;
+    border: 1px solid #f1f1f1;
+}
+
+.flag {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    gap: 2px;
+}
+
+.nomor {
+    border: 1px solid transparent
+}
+
+.page-no:focus {
+    border: 1px solid transparent;
+    outline: none;
+}

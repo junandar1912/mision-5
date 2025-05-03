@@ -27,26 +27,35 @@ const Registrasi = () => {
           </div>
           <div className='selection'>
             <div className='flag'>
-              <select name='phone' id='nomor'>
+              <img src="../src/assets/gambar/indonesia (ID).svg" alt="" />
+              <select name='phone' id='nomor' className='page-no'>
                 <option value="+62">+62</option>
               </select>
             </div>
-            <input type="text" id='nomor'/>
+            <input type="text" id='nomor' className='nomor'/>
           </div>
           <div className='pass'>
-            <label htmlFor="password">Password<span>*</span></label>
-            <input type="password" id='pass'/>
-            <span className="password-toggle-icon"><i className="fas fa-eye-slash"></i></span>
-            <label htmlFor="konfir">Konfirmasi Password<span>*</span></label>
-            <input type="password" id='konfir'/>
-            <span className='icon-toogle'><i className='fas fa-eye-slash'></i></span>
+            <div className='div-pas'>
+              <label htmlFor="password">Password<span>*</span></label>
+              <div className='password'>
+                <input type="password" id='pass'/>
+                <span className="password-regis"><i className="fas fa-eye-slash"></i></span>
+              </div>
+            </div>
+            <div className='div-konfir'>
+              <label htmlFor="konfir">Konfirmasi Password<span>*</span></label>
+              <div className='konfirmasi'>
+                <input type="password" id='konfir'/>
+                <span className='password-regis'><i className='fas fa-eye-slash'></i></span>
+              </div>
+            </div>
           </div>
           <div className='tombol'>
             <button type='submit' className='daftar'>Daftar</button>
             <button type='submit' className='masuk'>Masuk</button>
           </div>
         </form>
-        <div className='divider'><span>atau</span></div>
+        <div className='divider'><span className='p-span'>atau</span></div>
         <button className='btn-g' type='submit'>
           <div className='btn'>
             <img src="./src/assets/gambar/logos_google-icon.svg" alt="btn-g" className='i-google'/>
