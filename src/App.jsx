@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import Menu from "./Page/menu/Menu.jsx";
 import Registrasi from "./Page/Registrasi/Registrasi.jsx";
 import Login from "./Page/Login/Login.jsx";
-import Detail from "./Page/Detail-produk/Detail.jsx";
+import Semuaproduk from "./page/Semua-produk/Semuaproduk.jsx"
 
 
 
@@ -17,7 +17,7 @@ ReactDOM.createRoot(root).render(
       <Route path="/" element={<Menu />} />
       <Route path="Registrasi" element={<Registrasi />} />
       <Route path="login" element={<Login />} />
-      <Route path="Detail" element={<Detail />}/>
+      <Route path="Semuaproduk" element={<Semuaproduk />}/>
     </Routes>
   </BrowserRouter>
 );

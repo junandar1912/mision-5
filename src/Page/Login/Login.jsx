@@ -16,15 +16,17 @@ const Login = () => {
           <label htmlFor="e-mail">E-mail<span>*</span></label>
           <input type="text"/>
           <label htmlFor="password">Kata Sandi<span>*</span></label>
-          <input type="password" />
-          <span className='icon-toogle'><i className='fas fa-eye-slash'></i></span>
+          <div className='Login password'>
+            <input type="password" />
+            <span className='icon-toogle'><i className='fas fa-eye-slash'></i></span>
+          </div>
           <a href="http://">Lupa Password?</a>
         <div className='tombol'>
           <button type='submit' className='masuk'>Masuk</button>
           <button type='submit' className='daftar'>Daftar</button>
         </div>
         </form>
-        <span className='divider' ><p>atau</p></span>
+        <span className='divider' ><p className='p-atau'>atau</p></span>
         <button className='google' type='submit'>
           <div className='isi'>
            <img src="./src/assets/gambar/logos_google-icon.svg" alt="button" className='img-g'/>

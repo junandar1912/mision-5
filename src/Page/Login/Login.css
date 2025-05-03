@@ -66,20 +66,30 @@ input {
     border-radius: 10px;
 }
 
+.Login-password {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    gap: 20px;
+}
+
 .icon-toogle {
-    position: absolute;
-    right: 35.5%;
-    top: 44%;
     height: 24px;
     width: 24px;
     color: #222325;
     cursor: pointer;
+    padding-top: 10px;
 }
 
 span {
     color: red;
 }
 
+.p-atau {
+    color: #222325;
+    font-family: 'DM Sans';
+    margin: 20px;
+}
 
 a {
     align-self: flex-end;
