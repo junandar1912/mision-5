@@ -1,15 +1,21 @@
 import React from 'react'
 import './Radio.css'
 
-const Radio = ({ handleRadioChange, nami }) => {
-  return (
-    <div className='Radio-container'>
-      <div className='Radio-label'>
-        <input type="radio" name="durasi" value="kurang4" onChange={handleRadioChange} className='radio-switch'/>
-        <p className='name-check'>{ nami }</p>
-      </div>
-    </div>
-  )
-}
 
-export default Radio
+const Radio = ({ handleRadioChange, nama, value, checked, name = "durasi" }) => {
+  return (
+    <label className="radio-container">
+      <input
+        type="radio"
+        name={name}
+        value={value}
+        onChange={handleRadioChange}
+        checked={checked}
+        className="radio-input"
+      />
+      <span className="radio-label">{nama}</span>
+    </label>
+  );
+};
+
+export default Radio;

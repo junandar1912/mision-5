@@ -2,7 +2,7 @@ import React from 'react';
 import './Checkbox.css';
 
 
-const Checkbox = ({ label, name, defaultChecked, props, namaCheckbox }) => {
+const Checkbox = ({ label, name, defaultChecked, props, }) => {
   return (
     <label className="checkbox-container">
       <input 
@@ -13,8 +13,7 @@ const Checkbox = ({ label, name, defaultChecked, props, namaCheckbox }) => {
         {...props}
       />
       <span className="checkmark"></span>
-      {label && <span className="label-text">{label}</span>}
-      <p className='name-check'>{ namaCheckbox }</p>      
+      {label && <p className="label-text">{label}</p>}      
     </label>
   );
 };

@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import './Headerprofil.css'
 
 
-const Header = ({image}) => {
+const Header = () => {
 
+  const [open, setopen] = useState(false);
+  const Kategoris = ["Teknologi", "Bisnis", "Setting"]
+
+  //usestate
   
+  const KategoriRef = useRef();
+  const navRef = useRef();
 
+  window.addEventListener('click', (jika)=>{
+    console.log(jika.target === navRef.current);
+  });
 
   return (
     <header>
@@ -13,19 +22,25 @@ const Header = ({image}) => {
         <div className='logo-detail'>
           <img src="../src/assets/gambar/logo.svg" className='photo' />\
           <div className='dropdown-container'>
-            <button className="nav-head" >
+            <button className="nav-head" onClick={() => setopen(!open)} ref={navRef} >
               Kategori
             </button>
-            <div className='dropdown'>
-              <a href="#">Teknologi</a>
-              <a href="#">Bisnis</a>
-              <a href="#">Hiburan</a>
-              <a href="#">Olahraga</a>
+            {open && (
+            <div className='dropdown' ref={KategoriRef}>
+             <d className='tombol-drop'>
+              {
+                Kategoris.map((Kategori)=> (
+                  <a key={Kategori} className='kat-con'>
+                    {Kategori}
+                  </a>
+                ))
+              }
+             </d>
+            </div>)}
             </div>
-          </div>
         </div>
         <div className='avatar-profil'>
-          <img src={image} alt="profil" className='photo-profil'/>
+          <img src="../src/assets/gambar/avatar/avatar.png" alt="profil" className='photo-profil'/>
         </div>
       </div>
     </header>

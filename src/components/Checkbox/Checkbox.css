@@ -8,9 +8,10 @@
     display: flex;
     flex-direction: row;
     height: 24px;
-    width: 129px;
+    width: 100%;
     border: 1px solid transparent;
     gap: 10px;
+    text-align: center;
 }
 
 .Radio-label {
@@ -44,10 +45,11 @@
     color: white;
 }
 
-.name-check {
+.label-text {
     font-family: 'DM Sans';
     font-weight: 400;
     font-size: 16px;
     letter-spacing: 0.2px;
     color: #333333AD;
+    text-align: center;
 }

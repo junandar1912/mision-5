@@ -9,7 +9,6 @@
     padding: 64px 120px;
     display: flex;
     flex-direction: column;
-    justify-items: center;
     gap: 64px;
 }
 
@@ -37,16 +36,22 @@
     color: #333333;
 }
 
-.container-detail {
-    display: flex;
-    flex-direction: row;
+/* sebelah kiri */ 
+
+.con-detail {
+    display: flex !important;
+    flex-direction: row !important;
+    padding: 0px;
     gap: 42px;
+    width: 100%;
+    height: auto;
+
 }
 
 .desc-but {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 30%;
     height: 668px;
     padding: 20px;
     border-radius: 10px;
@@ -61,6 +66,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    list-style: none;
 }
 
 .filter-nav {
@@ -72,6 +78,7 @@
     font-weight: 600;
     font-size: 18px;
     color: #333333;
+    list-style: none;
 }
 
 .Reset-nav {
@@ -83,12 +90,14 @@
     font-weight: 600;
     font-size: 18px;
     color: red;
+    list-style: none;
 }
 
 .desc-nav {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    list-style: none;
 }
 
 .dropdown-filter {
@@ -99,4 +108,107 @@
     padding: 12px 16px;
     border-radius: 10px;
     border: 1px solid #3A35411F;
+    list-style: none;
 }
+
+.pilihan {
+    list-style: none;
+}
+
+/* sebelah kanan */
+
+.card-section-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 60%;
+    height: 100%;
+}
+
+.cari-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.urutan-detail {
+    width: 122px;
+    height: 48px;
+    border: 1px solid #3A35411F;
+    border-radius: 10px;
+    padding: 12px;
+    font-family: 'DM Sans';
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    line-height: 140%;
+    outline: none;
+}
+
+.urutan-detail:focus {
+    outline: none;
+}
+
+.fitur-cari-detail {
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+    padding: 12px;
+    padding-left: 5px;
+    gap: 8px;
+}
+
+.cari-kelas:focus {
+    outline: none;
+}
+
+.cari-kelas {
+    height: 22px;
+    width: 159px;
+    border: 1px solid transparent;
+}
+/* card page */
+.card-page {
+    display: grid;
+    gap: 10px;
+    list-style: none;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  
+  .pagination-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: #344054;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 5px;
+  }
+  
+  .pagination-button:hover:not(:disabled) {
+    background-color: #f2f4f7;
+    cursor: pointer;
+  }
+  
+  .pagination-button.active {
+    background-color: #FFBD3A;
+    color: white;
+    border-color: #FFBD3A;
+  }
+  
+  .pagination-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
