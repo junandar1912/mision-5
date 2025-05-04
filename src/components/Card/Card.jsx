@@ -13,16 +13,27 @@ const Card = ({image, title, avatar, description, instructor, reviews, rating, p
               <img src={avatar} alt={instructor} className="instructor-avatar" />
               <div className='course-profil'>
                <p className="instructor-name">{instructor}</p>
-               <p className='instructor-job'>{job}</p>
+               <div className='flex-row'>
+                 <p className='instructor-job'>{job}</p>
+                 <p className='job'>di Gojek</p>
+               </div>
               </div>
             </div>
             <div className="course-rating">
               <div className='rating'>
-               <span className="star">★</span>
-               <span>{rating}</span>
-               <span className="review-count">({reviews})</span>
+               <span className="star">
+                <i className='fa fa-star checked'></i>
+                <i className='fa fa-star checked'></i>
+                <i className='fa fa-star checked'></i>
+                <i className='fa fa-star'></i>
+                <i className='fa fa-star'></i>
+                </span>
+                <form action="fa fa-star" className='rating-count'>
+                  <span className='review-count'>{rating}</span>
+                  <span className="review-count">({reviews})</span>
+                </form>
               </div>
-              <div className="course-price">{price}</div>
+              <div className="course-price"><p className='price'>{price}</p></div>
             </div>
           </div>
         </div>

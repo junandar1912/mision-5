@@ -19,6 +19,7 @@
     width: 100%;
     justify-content: flex-start;
 }
+/*titel*/
 
 .course-content {
     display: flex;
@@ -26,12 +27,45 @@
     gap: 10px;
 }
 
+.course-title {
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.course-description {
+    font-family: "DM Sans";
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    color: #333333AD;
+}
+/*profi */
+
 .course-instructor {
     display: flex;
     flex-direction: row;
     height: 74px;
     width: 100%;
     gap: 10px;
+}
+
+.instructor-name {
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-weight: 500;
+    color: #222325;
+    letter-spacing: 0.2px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-family: "DM Sans";
+    font-weight: 400;
+    font-size: 14px;
+    color: #333333AD;
 }
 
 .instructor-avatar {
@@ -44,8 +78,47 @@
     gap: 10px;
 }
 
+/*bintang*/
+
 .course-rating {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.star i {
+    color: #ccc; /* Abu-abu default */
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+  
+.star i.checked {
+    color: #f5c518; /* Kuning (seperti warna bintang rating) */
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.rating-count {
+    display: flex;
+    flex-direction: row;
+}
+
+.review-count {
+    font-family: "DM Sans";
+    font-weight: 500;
+    font-size: 14px;
+    color: #333333AD;
+    text-decoration: underline;
+}
+
+.price {
+    color: #3ECF4C;
+    font-family: "Poppins";
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
 }

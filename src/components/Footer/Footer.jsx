@@ -13,9 +13,9 @@ const Footer = () => {
                     <p className='no'>+62-877-7123-1234</p>
                 </div>
                 <div className="navigator">
-                    <ul className="nav-footer">
+                    <ul className="navi-footer">
                         <li className="isi-navigator">
-                            <button href="#" className="nav">Kategori</button>
+                            <button href="#" className="nav-foot">Kategori</button>
                             <a href="#">Digital & Teknologi</a>
                             <a href="#" >Pemasaran</a>
                             <a href="#">Manajemen Bisnis</a>
@@ -23,9 +23,9 @@ const Footer = () => {
                             <a href="#">Desain</a>
                         </li>
                     </ul>
-                    <ul className="nav-footer">
+                    <ul className="navi-footer">
                         <li className="isi-navigator">
-                            <button className="nav" href="#">Perusahaan</button>
+                            <button className="nav-foot" href="#">Perusahaan</button>
                             <a href="#">Tentang Kami</a>
                             <a href="#">FAQ</a>
                             <a href="#">Kebijakan Privasi</a>
@@ -33,9 +33,9 @@ const Footer = () => {
                             <a href="#">Bantuan</a>
                        </li>
                    </ul>
-                   <ul className="nav-footer">
+                   <ul className="navi-footer">
                         <li className="isi-navigator">
-                            <button href="#" className="nav">Komunitas</button>
+                            <button href="#" className="nav-foot">Komunitas</button>
                             <a href="#">Tips Sukses</a>
                             <a href="#">Blog</a>
                        </li>

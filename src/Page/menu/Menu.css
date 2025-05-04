@@ -50,6 +50,26 @@
     color: #FFFFFF;
 }
 
+.judul {
+    width: 100%;
+    height: 67px;
+    gap: 10px;
+}
+
+.judul-1 {
+    font-family: "Poppins";
+    font-size: 32px;
+    font-weight: 600;
+    color: #222325;
+}
+
+.judul-2 {
+    color: #333333AD;
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-weight: 500;
+}
+
 .btn-p {
     background-color: #3ECF4C;
     text-align: center;
@@ -71,8 +91,17 @@
 
 a {
     text-decoration: none;
+    color: #333333AD;
+    font-family: "DM Sans";
+    font-weight: 500;
+    font-size: 16px;
 }
 
+a:focus {
+    text-decoration: underline;
+}
+
+/*card list*/
 .draft ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -85,7 +114,7 @@ a {
     gap: 10px;
   }
 
-
+/*footer*/
 .footer-container {
     display: flex;
     flex-direction: column;

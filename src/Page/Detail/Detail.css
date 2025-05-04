@@ -1,0 +1,292 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "DM Sans, Poppins";
+}
+
+.Breadcrumb {
+    display: flex;
+    flex-direction: row;
+    height: 24px;
+    width: 100%;
+    gap: 5px;
+    padding: 2px;
+}
+
+.link-detail {
+    color: #333333AD;
+    font-family: "DM Sans";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    text-align: center;
+}
+
+.d-span {
+    color: #333333AD;
+    font-family: "DM Sans";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+}
+
+.p-produk-header {
+    color: #222325;
+    font-family: "DM Sans";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+}
+
+/* titel */
+
+.titel-produk {
+    height: 400px;
+    width: 100%;
+    background:linear-gradient(#000000CC), url("../../assets/gambar/background.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 82px 100px;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.p-produk {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+.p2-produk {
+    font-family: "Poppins";
+    font-weight: 600;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.img-produk {
+    height: 24px; 
+    width: 181px;
+}
+
+/*main */
+
+.produk-main {
+    display: flex;
+    flex-direction: row-reverse;
+    height: auto;
+    width: 100%;
+    gap: 36px;
+}
+/* card */
+.desc-button {
+    background-color: #FFFFFF;
+    border: 1px solid #3A35411F;
+    padding: 20px;
+    height: 500px;
+    width: 40%;
+    gap: 36px;
+    border-radius: 10px;
+}
+
+.t-produk {
+    height: 143px;
+    width: 100%;
+    gap: 16px;
+}
+
+.p-button {
+    font-family: 'Poppins';
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 600;
+    color: #222325;
+}
+
+.t2-button {
+    height: 25px;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+.diskon {
+    display: flex;
+    flex-direction: row!important;
+    width: 50%;
+    gap: 10px;
+}
+
+.p2-button {
+    font-family: 'DM Sans';
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    color: #0980E2;
+}
+
+.price-detail {
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 600;
+    color: #3ECF4C;
+}
+
+.d-review-count {
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    color: #3A354161;
+    text-decoration: line-through;
+}
+
+.d-discont {
+    height: 24px;
+    width: 84px;
+    padding: 4px 10px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: #FFBD3A;
+    color: #FFFFFF;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+}
+
+.button-produk {
+    width: 100%;
+    height: 42px;
+    background-color: #3ECF4C;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    margin-bottom: 36px;
+}
+
+.isi-card {
+    height: 137px;
+    gap: 12px;
+    border: 1px solid transparent;   
+}
+
+.t-isi {
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 600;
+    color: #222325;
+}
+
+.isi-kartu {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    height: 104px;
+}
+
+.ujian {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: flex-start;
+}
+
+.daftar-ujian {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.sertifikat {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: flex-start;
+}
+
+.daftar-sertifikat {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.p-ujian {
+    font-family: 'DM Sans';
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.bahasa {
+    height: 57px;
+    gap: 12px;
+    margin-top: 36px;
+}
+
+.p-bahasa {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 14px;
+    color: #222325;
+}
+
+/* descripsi */
+
+.desc-produk {
+    width: 100%;
+    height: 1516px;
+    gap: 36px;
+    display: flex;
+    flex-direction: column;
+}
+
+.head-desc {
+    padding: 24px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #3A35411F;
+    flex-direction: column;
+}
+
+.t-p-head {
+    font-family: "Poppins";
+    font-weight: 600;
+    color: #222325;
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.p-desc-produk {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    color: #333333;
+}
+
+.desc-profil {
+    padding: 24px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #3A35411F;
+    display: flex;
+    flex-direction: column;
+}
