@@ -252,7 +252,7 @@
 
 .desc-produk {
     width: 100%;
-    height: 1516px;
+    height: auto;
     gap: 36px;
     display: flex;
     flex-direction: column;
@@ -289,4 +289,113 @@
     border: 1px solid #3A35411F;
     display: flex;
     flex-direction: column;
+}
+
+.p1-desc-propil {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.profil-1 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 16px;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #3A35411F;
+}
+
+.p-profil1 {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    color: #222325;
+}
+
+.d-name-profil {
+    color: #222325;
+    font-family: 'DM Sans';
+    font-size: 16px;
+}
+
+.d-job-propil {
+    color: #333333AD;
+    font-family: 'DM Sans';
+    font-size: 14px;
+}
+
+/* button sembunyi */
+
+.description-button {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.but-1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.span-drop {
+    color: #3ECF4C;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.dropdown-content {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.b-around {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #3A35411F;
+    border-radius: 10px;
+}
+
+.play {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.video {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.b-p {
+    color: #222325;
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+/*foooter */
+
+.footer-produk {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.produk-lain {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style: none;
 }
