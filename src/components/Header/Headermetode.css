@@ -11,25 +11,25 @@ header {
     display: flex;
     flex-direction: row;
     padding: 12px 120px;
-    justify-content: space-between;
     background-color: #FFFFFF;
 }
 
-nav {
+.nav-bayar {
     display: flex;
     flex-direction: row;
-    height: 56px;
-    width: 1120px;
     justify-content: space-between;
-}
-
-.logo {
-    width: 237px;
-    height: 56px;
-    padding: 13px 22px;
+    width: 100%;
+    padding: 10px;
 }
 
 .photo {
     width: 194px;
     height: 30px;
+}
+
+.hasil-metode {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 10px;
 }

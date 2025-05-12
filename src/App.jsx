@@ -6,6 +6,7 @@ import Registrasi from "./Page/Registrasi/Registrasi.jsx";
 import Login from "./Page/Login/Login.jsx";
 import Semuaproduk from "./page/Semua-produk/Semuaproduk.jsx"
 import Detail from "./Page/Detail/Detail.jsx";
+import Metode from "./Page/Metode/Metode.jsx";
 
 
 
@@ -20,6 +21,7 @@ ReactDOM.createRoot(root).render(
       <Route path="login" element={<Login />} />
       <Route path="Semuaproduk" element={<Semuaproduk />}/>
       <Route path="Detail" element={<Detail/>}/>
+      <Route path="Metode" element= {<Metode/>}/>
     </Routes>
   </BrowserRouter>
 );

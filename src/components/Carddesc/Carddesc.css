@@ -1,0 +1,172 @@
+
+
+
+.image-desc-card {
+    margin-bottom: 20px;
+    height: 180px;
+    width: 100%;
+}
+
+
+.desc-button {
+    background-color: #FFFFFF;
+    border: 1px solid #3A35411F;
+    padding: 20px;
+    height: 520px;
+    width: auto;
+    gap: 36px;
+    border-radius: 10px;
+}
+
+.t-produk {
+    height: auto;
+    width: 100%;
+    gap: 16px;
+}
+
+.p-button {
+    font-family: 'Poppins';
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 600;
+    color: #222325;
+}
+
+.t2-button {
+    height: 25px;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+.diskon {
+    display: flex;
+    flex-direction: row!important;
+    width: 50%;
+    gap: 10px;
+}
+
+.p2-button {
+    font-family: 'DM Sans';
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    color: #0980E2;
+}
+
+.price-detail {
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 600;
+    color: #3ECF4C;
+}
+
+.d-review-count {
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    color: #3A354161;
+    text-decoration: line-through;
+}
+
+.d-discont {
+    height: 24px;
+    width: 84px;
+    padding: 4px 10px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: #FFBD3A;
+    color: #FFFFFF;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+}
+
+.button-produk {
+    width: 100%;
+    height: 42px;
+    background-color: #3ECF4C;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    margin-bottom: 36px;
+}
+
+.isi-card {
+    height: 137px;
+    gap: 12px;
+    border: 1px solid transparent;   
+}
+
+.t-isi {
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 600;
+    color: #222325;
+}
+
+.isi-kartu {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    height: 104px;
+}
+
+.ujian {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: flex-start;
+}
+
+.daftar-ujian {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.sertifikat {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: flex-start;
+}
+
+.daftar-sertifikat {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.p-ujian {
+    font-family: 'DM Sans';
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.bahasa {
+    height: 57px;
+    gap: 12px;
+    margin-top: 36px;
+}
+
+.p-bahasa {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 14px;
+    color: #222325;
+}

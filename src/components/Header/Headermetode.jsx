@@ -1,12 +1,37 @@
 import React from 'react'
-import './Header.css'
+import './Headermetode.css'
+import Step from '../../components/Step/Step'
+
+const StepData = [{
+  nama: 'pilih metode',
+  checked: 'checked',
+  perlihatkan: false
+},
+{
+  nama: 'bayar',
+  perlihatkan: true
+},
+{
+  nama: 'selesai',
+  perlihatkan: true
+}]
 
 const Header = () => {
   return (
     <header>
-      <div className='nav'>
-        <div className='logo'>
+      <div className='nav-bayar'>
           <img src="../src/assets/gambar/logo.svg" className='photo' />
+          <div className='nav-bayar2'>
+            <ul className='hasil-metode'>
+              {StepData.map ((item,index)=>(
+                <li className='hasil-metod' key={index}>
+                  <Step
+                  checked={item.checked}
+                  nama={item.nama}
+                  perlihatkan={item.perlihatkan}
+                  />
+          </li>))}
+        </ul>
         </div>
       </div>
     </header>

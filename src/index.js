@@ -1,4 +1,5 @@
 import Header from "./components/Header/Header.jsx";
+import Headermetode from "./components/Header/Headermetode.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Login from "./Page/Login/Login.jsx";
 import Registrasi from "./Page/Registrasi/Registrasi.jsx";
@@ -9,7 +10,9 @@ import Checkbox from "./components/Checkbox/Checkbox.jsx";
 import Switch from "./components/Switch/Switch.jsx";
 import Headerprofile from "./components/Header/Headerprofil.jsx"
 import Detail from "./Page/Detail/Detail.jsx"
+import Step from "./components/Step/Step.jsx"
+import PaymentMethods from "./components/Payment/Payment.jsx";
 
 
 
-export { Header, Headerprofile, Footer, Login, Registrasi, Menu, Card, Semuaproduk, Checkbox, Switch, Detail };
+export { Header, Headerprofile, Footer, Login, Registrasi, Menu, Card, Semuaproduk, Checkbox, Switch, Detail, Headermetode, Step, PaymentMethods };

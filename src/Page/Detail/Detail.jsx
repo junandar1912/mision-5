@@ -3,8 +3,15 @@ import Card from '../../components/Card/Card'
 import Headerprofile from '../../components/Header/Headerprofil'
 import Footer from '../../components/Footer/Footer'
 import './Detail.css'
-import { Dropdown } from 'bootstrap'
+import Carddes from '../../components/Carddesc/Carddes'
 
+const Carddesdata = [{
+  perlihatkan: true,
+  Harga: 'RP 250.000',
+  Diskon: 'RP 500K',
+  Count: 'Diskon 50%',
+  terlihat: true
+}]
 
 const cardData = [
   {
@@ -81,56 +88,15 @@ const Detail = () => {
         <img src="../src/assets/rating.svg" alt="" className='img-produk'/>
       </div>
       <main className='produk-main'>
-        <div className='desc-button'>
-          <div className='t-produk'>
-            <p className='p-button'>Gapai Karier Impianmu <br/> sebagai Seorang UI/UX Designer & Product Manager.</p>
-            <div className='t2-button'>
-              <div className='diskon'>
-                <p className='price-detail'>Rp 500K</p>
-                <p className='d-review-count'>Rp 250K</p>
-              </div>
-              <p className='d-discont'>Diskon 50%</p>
-            </div>
-            <p className='p2-button'>Penawaran spesial tersisa 2 hari lagi!</p>
-          </div>
-          <button className='button-produk'>Beli Sekarang</button>
-          <div className='isi-card'>
-            <p className='t-isi'>Kelas Ini Sudah Termasuk</p>
-            <div className='isi-kartu'>
-              <ul className='ujian'>
-                <li className='daftar-ujian'>
-                  <img src="../src/assets/File_Check.svg" alt="" className='img-ujian'/>
-                  <p className='p-ujian'>Ujian Akhir</p>
-                </li>
-                <li className='daftar-ujian'>
-                  <img src="../src/assets/book-2.svg" alt="" className='img-ujian'/>
-                  <p className='p-ujian'>7 Dokumen</p>
-                </li>
-                <li className='daftar-ujian'>
-                   <img src="../src/assets/File_Edit.svg" alt="" className='img-ujian'/>
-                   <p className='p-ujian'>Preset</p>
-                </li>
-              </ul>
-              <ul className='sertifikat'>
-                <li className='daftar-sertifikat'>
-                  <img src="../src/assets/video.svg" alt="" className='img-ujian'/>
-                  <p className='p-ujian'>49 Video</p>
-                </li>
-                <li className='daftar-sertifikat'>
-                  <img src="../src/assets/file-certificate.svg" alt="" className='img-ujian'/>
-                  <p className='p-ujian'>Sertifikat</p>
-                </li>
-              </ul>
-            </div>
-            <div className='bahasa'>
-                <p className='p-bahasa'>Bahasa Pengantar</p>
-                <div className='daftar-sertifikat'>
-                  <img src="../src/assets/world.svg" alt="" />
-                  <p className='p-ujian'>Bahasa Indonesia</p>
-                </div>
-            </div>
-          </div>
-        </div>
+        {Carddesdata.map((item,index) => (
+        <div className='detail-card 'key={index}>
+          <Carddes 
+          perlihatkan={item.perlihatkan}
+          Harga={item.Harga}
+          Diskon={item.Diskon}
+          Count={item.Count}
+          />
+        </div>))}
         <div className='desc-produk'>
           <div className='head-desc'>
             <p className='t-p-head'>Deskripsi</p>

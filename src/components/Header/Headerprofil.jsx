@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import './Headerprofil.css'
 
 
-const Header = () => {
+const Header = ( Nama ) => {
 
   const [open, setopen] = useState(false);
   const Kategoris = ["Teknologi", "Bisnis", "Setting"]
