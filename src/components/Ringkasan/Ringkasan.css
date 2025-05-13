@@ -1,0 +1,79 @@
+
+
+
+.Ringkasan {
+    background-color: white;
+    padding: 20px;
+    height: auto;
+    gap: 20px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #3A35411F;
+}
+
+.title-ringkasan {
+    gap: 20px;
+}
+
+.title-payment {
+    color: #222325;
+    font-family: 'Poppins';
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.ringkasan-des {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #333333AD;
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.2px;
+    height: 56px;
+    width: 100%;
+}
+
+.total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 25px;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.2px;
+    color: #222325;
+}
+
+.regis-nav1 {
+    height: 42px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #3ECF4C;
+    color: #3ECF4C;
+    align-items: center;
+    font-family: 'Poppins';
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    background-color: white;
+}
+
+.button-ring {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/*font */
+
+.p-ringkasan .h-ringkasan {
+    font-family: 'DM Sans';
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    color: #333333AD;
+}

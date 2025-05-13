@@ -2,7 +2,7 @@ import React from 'react'
 import './Step.css'
 
 
-const Step = ( { handleRadioChange, checked, nama, perlihatkan}) => {
+const Step = ( { handleRadioChange, checked, nama, perlihatkan,}) => {
   return (
     <div className='step'>
       <label className='step-contan'>

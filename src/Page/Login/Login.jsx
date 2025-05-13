@@ -1,6 +1,10 @@
-import React from 'react'
+import React from 'react';
 import Header from '../../components/Header/Header.jsx';
 import './Login.css'
+
+
+
+
 
 const Login = () => {
   return (
@@ -22,8 +26,8 @@ const Login = () => {
           </div>
           <a href="http://">Lupa Password?</a>
         <div className='tombol'>
-          <button type='submit' className='masuk'>Masuk</button>
-          <button type='submit' className='daftar'>Daftar</button>
+           <button type='button' className='masuk'>Masuk</button>
+           <button type='button' className='daftar'>Daftar</button>
         </div>
         </form>
         <span className='divider' ><p className='p-atau'>atau</p></span>

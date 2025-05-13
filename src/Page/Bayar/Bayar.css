@@ -1,0 +1,38 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container-bayar {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 36px;
+}
+
+.bayar2 {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    height: auto;
+    width: 80%;
+}
+
+.p-bayar {
+    /* Login ke KlikBCA Individual Pilih "Transfer", kemudian pilih "Transfer ke BCA Virtual Account" Masukkan nomor Virtual Account Pilih "Lanjutkan" untuk melanjutkan pembayaran Masukkan "RESPON KEYBCA APPLI 1" yang muncul pada Token BCA Anda, lalu klik tombol "Kirim" Pembayaran telah selesai */
+
+width: 484px;
+height: auto;
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 140%;
+/* or 25px */
+letter-spacing: 0.2px;
+color: rgba(51, 51, 51, 0.68);
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
