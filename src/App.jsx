@@ -8,6 +8,7 @@ import Semuaproduk from "./page/Semua-produk/Semuaproduk.jsx"
 import Detail from "./Page/Detail/Detail.jsx";
 import Metode from "./Page/Metode/Metode.jsx";
 import Bayar from "./Page/Bayar/Bayar.jsx";
+import Ubah from "./Page/Ubah/Ubah.jsx";
 
 
 
@@ -24,6 +25,7 @@ ReactDOM.createRoot(root).render(
       <Route path="Detail" element={<Detail/>}/>
       <Route path="Metode" element= {<Metode/>}/>
       <Route path="Bayar" element={<Bayar/>}/>
+      <Route path="Ubah Metode" element={<Ubah/>}/>
     </Routes>
   </BrowserRouter>
 );

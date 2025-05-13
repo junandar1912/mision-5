@@ -13,6 +13,8 @@
   .timer-text {
     margin-right: 8px;
     font-weight: 500;
+    color: #333333AD;
+    font-family: "DM Sans";
   }
   
   .time-box {

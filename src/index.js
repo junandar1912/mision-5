@@ -14,7 +14,9 @@ import Step from "./components/Step/Step.jsx"
 import PaymentMethods from "./components/Payment/Payment.jsx";
 import Timer from "./components/Timer/Timer.jsx";
 import Bayar from "./Page/Bayar/Bayar.jsx";
+import Ubah from "./Page/Ubah/Ubah.jsx";
 
 
 
-export { Header, Headerprofile, Footer, Login, Registrasi, Menu, Card, Semuaproduk, Checkbox, Switch, Detail, Headermetode, Step, PaymentMethods, Timer, Bayar };
+export { Header, Headerprofile, Footer, Login, Registrasi, Menu, Card, Semuaproduk, 
+    Checkbox, Switch, Detail, Headermetode, Step, PaymentMethods, Timer, Bayar, Ubah };

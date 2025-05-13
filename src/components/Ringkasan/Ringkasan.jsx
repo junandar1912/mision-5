@@ -1,15 +1,34 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Ringkasan.css'
 
 const Ringkasan = ({terlihat, bank, kode, harga, admin, judul, total, image}) => {
+
+
+  const paragrafRef = useRef(null);
+
+  const handleSalin = () => {
+    const teks = paragrafRef.current.textContent;
+    navigator.clipboard.writeText(teks)
+      .then(() => {
+        alert("Teks berhasil disalin!");
+      })
+      .catch(err => {
+        alert("Gagal menyalin teks: " + err);
+      });
+  };
+
+
+
   return (
       <main className='Ringkasan'>
+        <h2 className='title-payment'>Metode Pembayaran</h2>
         {terlihat && <div className='title-ringkasan'>
-          <h2 className='tittle-payment'>Metode Pembayaran</h2>
           <div className='bank-kode'>
             <img src={ image } alt="image bank" />
             <p className='nama-bank'>{ bank }</p>
-            <p className='kode-bank'>{ kode }<span>Salin</span></p>
+            <div className='kode-bank'>
+              <p className='kode-bang'  ref={paragrafRef}>{ kode }</p> <span onClick={handleSalin}>Salin</span>
+            </div>
           </div>
         </div>}
         <h2 className='title-payment'>Ringkasan Pesanan</h2>

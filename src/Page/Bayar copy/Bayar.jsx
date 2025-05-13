@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Bayar.css'
 import Carddes from '../../components/Carddesc/Carddes.jsx'
 import Ringkasan from '../../components/Ringkasan/Ringkasan.jsx'
-import Timer from '../../components/Timer/Timer'
+import Timer from '../../components/Timer/Timer.jsx'
 import Cara from '../../components/Cara/Cara.jsx'
 import Headerbayar from '../../components/Header/Headerbayar.jsx'
 

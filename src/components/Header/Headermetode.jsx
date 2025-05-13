@@ -5,15 +5,18 @@ import Step from '../../components/Step/Step'
 const StepData = [{
   nama: 'pilih metode',
   checked: 'checked',
-  perlihatkan: false
+  perlihatkan: false,
+  disable: true
 },
 {
   nama: 'bayar',
-  perlihatkan: true
+  perlihatkan: true,
+  disable: true
 },
 {
   nama: 'selesai',
-  perlihatkan: true
+  perlihatkan: true,
+  disable: true
 }]
 
 const Header = () => {

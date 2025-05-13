@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import './Bayar.css'
+import './Ubah.css'
 import Carddes from '../../components/Carddesc/Carddes.jsx'
 import Ringkasan from '../../components/Ringkasan/Ringkasan.jsx'
-import Timer from '../../components/Timer/Timer'
 import Cara from '../../components/Cara/Cara.jsx'
 import Headerbayar from '../../components/Header/Headerbayar.jsx'
+import { Headermetode } from '../../index.js'
 
 const RingkasanData = [{
-  terlihat: true, bank:'Bayar Melalui Virtual Account BCA',
+  terlihat: false, bank:'Bayar Melalui Virtual Account BCA',
   kode:'11739 081234567890',
   judul:'Video Learning: Gapai Karier Impianmu sebagai Seorang UI/UX Designer & Product Manager. ',
   harga:'Rp 767.500',admin:'Rp 7.000',total:'Rp 774.500',
@@ -25,7 +25,7 @@ const BankData = [{
 }]
 
 
-const Bayar = () => {
+const Ubah = () => {
 
   const [DibukaSection, setOpenDibuka] = useState(null);
 
@@ -48,8 +48,7 @@ const Bayar = () => {
 
   return (
     <>
-      <Headerbayar/>
-      <Timer/>
+      <Headermetode/>
       <div className='body'>
         <main className='container-bayar'>
           {CarddescData.map((item,index)=>(
@@ -87,4 +86,4 @@ const Bayar = () => {
     </>
   )
 }
-export default Bayar
+export default Ubah

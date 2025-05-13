@@ -13,6 +13,24 @@
 
 .title-ringkasan {
     gap: 20px;
+    justify-items: center;
+    box-sizing: border-box;display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 18px;
+    gap: 15px;
+    width: 100%;
+    height: 182px;
+    background: #FFFFFF;
+    border: 1px solid rgba(58, 53, 65, 0.12);
+    border-radius: 12px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.image-bank {
+    align-self: center;
 }
 
 .title-payment {
@@ -76,4 +94,29 @@
     font-weight: 400;
     letter-spacing: 0.2px;
     color: #333333AD;
+}
+
+.nama-bank {
+    color: #222325;
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+}
+
+.kode-bank {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 18px;
+    color: #333333AD;
+}
+
+span {
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
 }
