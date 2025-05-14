@@ -1,13 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../../components/Header/Header.jsx'
+import { useNavigate } from 'react-router-dom';
+
 import './Registrasi.css'
 
 
 const Registrasi = () => {
 
+   const [nama, setNama] = useState('');
+   const [nomor, setNomor] = useState('');
+   const [password, setPassword] = useState('');
+   const [konfirmasi, setKonfirmasi] = useState('');
+   const [showPassword, setShowPassword] = useState(false);
+   const [showKonfirmasi, setShowKonfirmasi] = useState(false);
+   const navigate = useNavigate();
 
+   const handleSubmit = (e) => {
+      e.preventDefault();
+
+
+      if (!nama || !nomor || !password || !konfirmasi) {
+      alert('Harap lengkapi semua kolom.');
+      return;
+        }
+        
+        if (password !== konfirmasi) {
+      alert('Konfirmasi password tidak cocok.');
+      return;
+    }
+
+    console.log({ nama, nomor, password });
+    alert('Registrasi berhasil!');
+    localStorage.setItem('userData', JSON.stringify({ nama, nomor }));
+
+    setTimeout(() => {
+          window.location.href = '/';
+        }, 500); // agar alert sempat tampil
+};
   
+const handleMasukGoogle = () => {
+  alert('Fitur login dengan Google belum tersedia.');
+};
 
+ const handleMasuk = () => {
+    if (!nama || !nomor || !password || !konfirmasi) {
+      alert('Input tidak boleh kosong!');
+      return; 
+    }
+    // navigasi mau di arah ke mana
+    navigate('/dashboard');
+  };
 
 
   return (
@@ -19,9 +61,9 @@ const Registrasi = () => {
           <p className='h1'>Pendaftaran Akun</p>
           <p className='p'>Yuk, daftarkan akunmu sekarang juga!</p>
         </div>
-        <form action="my-form">
+        <form action="my-form" onSubmit={handleSubmit}>
           <label htmlFor="nama">Nama Lengkap<span>*</span></label>
-          <input type="text" id='nama' />
+          <input type="text" id='nama' value={nama} onChange={(e) => setNama(e.target.value)}/>
           <div className='no'>
             <label htmlFor="nomor">NO. HP<span>*</span></label>
           </div>
@@ -32,31 +74,38 @@ const Registrasi = () => {
                 <option value="+62">+62</option>
               </select>
             </div>
-            <input type="text" id='nomor' className='nomor'/>
+            <input type="text" id='nomor' className='nomor' value={nomor} onChange={(e) => setNomor(e.target.value)}/>
           </div>
           <div className='pass'>
             <div className='div-pas'>
               <label htmlFor="password">Password<span>*</span></label>
               <div className='password'>
-                <input type="password" id='pass'/>
-                <span className="password-regis"><i className="fas fa-eye-slash"></i></span>
+                <input  type={showPassword ? 'text' : 'password'} id='pass' value={password}
+                    onChange={(e) => setPassword(e.target.value)}/>
+                <span className='password-regis' onClick={() => setShowPassword(!showPassword)}>
+                  <i className={`fas ${showPassword ? 'fa-eye' : 'fa-eye-slash'}`}></i>
+                  </span>
               </div>
             </div>
             <div className='div-konfir'>
               <label htmlFor="konfir">Konfirmasi Password<span>*</span></label>
               <div className='konfirmasi'>
-                <input type="password" id='konfir'/>
-                <span className='password-regis'><i className='fas fa-eye-slash'></i></span>
+                <input id='konfir' value={konfirmasi}
+                    onChange={(e) => setKonfirmasi(e.target.value)}  type={showKonfirmasi ? 'text' : 'password'}/>
+                <span className='password-regis'
+                    onClick={() => setShowKonfirmasi(!showKonfirmasi)}>
+                  <i className={`fas ${showKonfirmasi ? 'fa-eye' : 'fa-eye-slash'}`}></i>
+                  </span>
               </div>
             </div>
           </div>
           <div className='tombol'>
             <button type='submit' className='daftar'>Daftar</button>
-            <button type='submit' className='masuk'>Masuk</button>
+            <button type='button' className='masuk' onClick={handleMasuk}>Masuk</button>
           </div>
         </form>
         <div className='divider'><span className='p-span'>atau</span></div>
-        <button className='btn-g' type='submit'>
+        <button className='btn-g' type='button' onClick={handleMasukGoogle}>
           <div className='btn'>
             <img src="./src/assets/gambar/logos_google-icon.svg" alt="btn-g" className='i-google'/>
             <p className='titel'>Masuk dengan google</p>

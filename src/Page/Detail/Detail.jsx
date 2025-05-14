@@ -5,6 +5,7 @@ import Footer from '../../components/Footer/Footer'
 import './Detail.css'
 import Carddes from '../../components/Carddesc/Carddes'
 
+
 const Carddesdata = [{
   perlihatkan: true,
   Harga: 'RP 250.000',
