@@ -10,6 +10,7 @@ import Metode from "./Page/Metode/Metode.jsx";
 import Bayar from "./Page/Bayar/Bayar.jsx";
 import Ubah from "./Page/Ubah/Ubah.jsx";
 import Selesai from "./Page/Pesananselesai/Selesai.jsx";
+import Profil from "./Page/Profil/Profil.jsx";
 
 
 
@@ -28,6 +29,7 @@ ReactDOM.createRoot(root).render(
       <Route path="Bayar" element={<Bayar/>}/>
       <Route path="Ubah Metode" element={<Ubah/>}/>
       <Route path="Pesanan Selesai" element={<Selesai/>}/>
+      <Route path="Profil" element={<Profil/>}/>
     </Routes>
   </BrowserRouter>
 );

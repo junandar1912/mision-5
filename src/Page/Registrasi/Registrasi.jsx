@@ -1,58 +1,49 @@
 import React, { useState } from 'react'
 import Header from '../../components/Header/Header.jsx'
 import { useNavigate } from 'react-router-dom';
-
+import Datastore from '../../Datastore.js';
 import './Registrasi.css'
 
 
 const Registrasi = () => {
-
    const [nama, setNama] = useState('');
+   const [Email, setEmail]= useState('')
    const [nomor, setNomor] = useState('');
    const [password, setPassword] = useState('');
    const [konfirmasi, setKonfirmasi] = useState('');
    const [showPassword, setShowPassword] = useState(false);
    const [showKonfirmasi, setShowKonfirmasi] = useState(false);
    const navigate = useNavigate();
+   const { setUser } = Datastore();
 
    const handleSubmit = (e) => {
       e.preventDefault();
 
+      if (!nama || !nomor || !password || !konfirmasi || !Email) {
+        alert('Harap lengkapi semua kolom.');
+        return;
+      }
+      if (password !== konfirmasi) {
+        alert('Konfirmasi password tidak cocok.');
+        return;
+      }
 
-      if (!nama || !nomor || !password || !konfirmasi) {
-      alert('Harap lengkapi semua kolom.');
-      return;
-        }
-        
-        if (password !== konfirmasi) {
-      alert('Konfirmasi password tidak cocok.');
-      return;
-    }
+      const userData = { name: nama, Email: Email, phone: nomor, password: password };
+      localStorage.setItem('registrasiUser', JSON.stringify(userData)); // sudah benar
+      setUser(userData);
+      alert('Registrasi berhasil! Silakan login.');
+      navigate('/login');
+   };
 
-    console.log({ nama, nomor, password });
-    alert('Registrasi berhasil!');
-    localStorage.setItem('userData', JSON.stringify({ nama, nomor }));
+   const handleMasukGoogle = () => {
+      alert('Fitur login dengan Google belum tersedia.');
+   };
 
-    setTimeout(() => {
-          window.location.href = '/';
-        }, 500); // agar alert sempat tampil
-};
-  
-const handleMasukGoogle = () => {
-  alert('Fitur login dengan Google belum tersedia.');
-};
+   const handleMasuk = () => {
+      navigate('/login');
+   };
 
- const handleMasuk = () => {
-    if (!nama || !nomor || !password || !konfirmasi) {
-      alert('Input tidak boleh kosong!');
-      return; 
-    }
-    // navigasi mau di arah ke mana
-    navigate('/dashboard');
-  };
-
-
-  return (
+   return (
     <>
     <Header/>
     <div className='body-regis'>
@@ -64,6 +55,8 @@ const handleMasukGoogle = () => {
         <form action="my-form" onSubmit={handleSubmit}>
           <label htmlFor="nama">Nama Lengkap<span>*</span></label>
           <input type="text" id='nama' value={nama} onChange={(e) => setNama(e.target.value)}/>
+          <label htmlFor="Email">Email<span>*</span></label>
+          <input type="text" id='Email' value={Email} onChange={(e) => setEmail(e.target.value)}/>
           <div className='no'>
             <label htmlFor="nomor">NO. HP<span>*</span></label>
           </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import './Headermetode.css'
 import Step from '../../components/Step/Step'
 
+
 const StepData = [{
   nama: 'pilih metode',
   checked: 'checked',

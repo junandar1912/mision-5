@@ -4,6 +4,7 @@ import Carddes from '../../components/Carddesc/Carddes.jsx'
 import './Metode.css'
 import PaymentMethods from '../../components/Payment/Payment.jsx'
 import Ringkasan from '../../components/Ringkasan/Ringkasan.jsx'
+import { useNavigate } from 'react-router-dom';
 
 
 const CarddesData = [{

@@ -5,6 +5,7 @@ import Ringkasan from '../../components/Ringkasan/Ringkasan.jsx'
 import Timer from '../../components/Timer/Timer.jsx'
 import Cara from '../../components/Cara/Cara.jsx'
 import Headerbayar from '../../components/Header/Headerbayar.jsx'
+import { useNavigate } from 'react-router-dom';
 
 
 const RingkasanData = [{

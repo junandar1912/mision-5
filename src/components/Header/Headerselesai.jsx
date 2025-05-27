@@ -1,6 +1,7 @@
 import React from 'react'
 import './Headermetode.css'
 import Step from '../../components/Step/Step'
+import { useNavigate } from 'react-router-dom';
 
 
 const StepData = [{

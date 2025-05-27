@@ -4,6 +4,7 @@ import Headerprofile from '../../components/Header/Headerprofil'
 import Footer from '../../components/Footer/Footer'
 import './Detail.css'
 import Carddes from '../../components/Carddesc/Carddes'
+import { useNavigate } from 'react-router-dom';
 
 
 const Carddesdata = [{

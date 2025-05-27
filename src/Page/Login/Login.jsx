@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from '../../components/Header/Header.jsx';
 import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
-
+import Datastore from '../../Datastore.js';
 import './Login.css'
 
 
@@ -11,26 +11,41 @@ import './Login.css'
 
 const Login = () => {
 
-  const [email, setEmail] = useState('');
+  const [Email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+
+  // state Zustand
+  const { setUser } = Datastore();
   
+  // navigasi
+  const navigate = useNavigate();
 
   const handleLogin = () => {
-    if (email && password) {
-      localStorage.setItem('userName', email);
-      window.location.href = '/'; //link
+
+    // ambil data dari Zustand
+    const savedUser = JSON.parse(localStorage.getItem('registeredUser'));
+
+    // Validasi apakah data user ada
+    if (savedUser) {
+      // Cek apakah email dan password cocok
+      if (savedUser.Email === Email && savedUser.password === password) {
+        setUser(savedUser); // Simpan user ke store Zustand
+        navigate('/'); // Arahkan ke halaman utama
+      } else {
+        alert('Email atau kata sandi salah!');
+      }
     } else {
-      alert('Tolong periksa kembali email dan kata sandi Anda.');
+      alert('Akun tidak ditemukan. Silakan daftar terlebih dahulu.');
     }
   };
 
-
-  const navigate = useNavigate();
-
+  // Fungsi navigasi ke halaman registrasi
   const handleDaftar = () => {
-  navigate('/registrasi');
-};
+    navigate('/registrasi');
+  };
+
+    
 
   return (
     <>
@@ -43,7 +58,7 @@ const Login = () => {
         </div>
         <form className="my-form" onSubmit={(e) => e.preventDefault()}>
           <label htmlFor="e-mail">E-mail<span>*</span></label>
-          <input type="text" id='Email'  value={email} onChange={(e) => setEmail(e.target.value)}/>
+          <input type="text" id='Email'  value={Email} onChange={(e) => setEmail(e.target.value)}/>
           <label htmlFor="password">Kata Sandi<span>*</span></label>
           <div className='Login password'>
             <input type={showPassword ? 'text' : 'password'} id='password' value={password} onChange={(e) => setPassword(e.target.value)}/>

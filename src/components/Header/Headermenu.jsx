@@ -1,7 +1,12 @@
 import React from 'react'
 import './Headermenu.css'
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+
+  const navigate = useNavigate()
+
+
   return (
     <header>
       <div className='nav-menu'>
@@ -10,8 +15,10 @@ const Header = () => {
           <a href="" className='kategori'>kategori</a>
         </div>
         <div className='navbar'>
-          <button type='submit' href="" className='login-nav'>Login</button>
-          <button type='submit' href="" className='regis-nav'>Registrasi</button>
+          <button type='submit' href="" className='login-nav'
+          onClick={() => navigate ('/login')}>Login</button>
+          <button type='submit' href="" className='regis-nav' 
+          onClick={()=> navigate ('/registrasi')}>Registrasi</button>
         </div>
       </div>
     </header>
