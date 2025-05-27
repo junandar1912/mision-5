@@ -5,7 +5,6 @@ import Card from '../../components/Card/Card.jsx'
 import Checkbox from '../../components/Checkbox/Checkbox.jsx'
 import Radio from '../../components/Radio/Radio.jsx'
 import Switch from '../../components/Switch/Switch.jsx'
-import { useNavigate } from 'react-router-dom';
 import './Semuaproduk.css'
 
 const cardData = [

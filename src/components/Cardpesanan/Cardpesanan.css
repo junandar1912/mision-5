@@ -1,0 +1,80 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.header-card, .footer-card{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 16px 20px;
+    background-color: #E2FCD933;
+    border: 1px solid #3A35411F;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+
+.isi-header {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.isi-header h2 {
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size: 16px;
+    color: #333333;
+}
+
+.kode-p {
+    font-family: 'DM Sasn';
+    font-weight: 500;
+    font-size: 16px;
+    color: #0980E2;
+    text-decoration: underline;
+}
+
+.status-pesanan {
+    padding: 10px;
+}
+/* main */
+.main-card {
+    display: flex;
+    flex-direction: row;
+    gap: 36px;
+    background-color: transparent;
+    border: 1px solid #3A35411F;
+    padding: 20px;
+    height: 92px;
+}
+
+.main-card1 {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    height: 52px;
+    width: 70%;
+}
+
+.judul-pesanan h1 {
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size: 18px;
+    color: #222325;
+    text-align: center;
+}
+
+.vertical-divider::before, .vertical-divider::after {
+    gap: 10px;
+    height: 100%;
+    background-color: rgba(241, 241, 241, 1);
+}
+
+.label-harga {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
