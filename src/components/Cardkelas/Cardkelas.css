@@ -1,0 +1,100 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container-cardkelas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #3A35411F;
+    border-radius: 10px;
+}
+
+.header-cardkelas {
+    background-color: #E2FCD933;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 62px;
+    border: 1px solid #3A35411F;
+    padding: 16px 20px;
+}
+
+.header-cardkelas h4 {
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 500;
+    color: #222325;
+}
+/*form card */
+.card-kelas {
+    display: flex;
+    flex-direction: row;
+    gap: 36px;
+    padding: 20px;
+}
+
+.name-kelas {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.name-kelas h3 {
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 600;
+    color: #222325;
+}
+
+.name-kelas p {
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.isi-kelas {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.footer-kelas {
+    display: flex;
+    flex-direction: row;
+    background-color: #E2FCD933;
+    height: 74px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.progres {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    gap: 5%;
+}
+
+.progres p {
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333AD;
+}
+
+.deks-progres h1 {
+    font-family: 'DN Sans';
+    font-weight: 500;
+    font-size: 16px;
+    color: #222325;
+}
+
+.deks-progres {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}

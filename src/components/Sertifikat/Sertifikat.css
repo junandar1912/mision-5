@@ -1,0 +1,13 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.card-sertifikat {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #3A35411F; 
+    border-radius: 10px;
+}

@@ -9,11 +9,11 @@ import './Profil.css'
 
 
 const Profil = () => {
-
+  // state button untuk merubah page
    const [activeTab, setActiveTab] = useState('profil');
 
    
-  // merubah detail
+  // merubah judul dan deskripsi
   const renderTitleAndDescription = () => {
     switch (activeTab) {
       case 'profil':

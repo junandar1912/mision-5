@@ -1,0 +1,42 @@
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.pagination-arrow {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.pagination-arrow:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.pagination-page {
+  background-color: transparent;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.pagination-page:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination-page.active {
+  background-color: #ffb71b; /* warna kuning mirip gambar */
+  color: white;
+  font-weight: bold;
+}

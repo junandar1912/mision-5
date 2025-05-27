@@ -13,7 +13,7 @@ const Cardpesanan = ({kode, waktu, judul, harga}) => {
       </div>
       <div className='main-card'>
         <div className='main-card1'>
-            <img src="" alt="" style={{width:'52px', height:'52px', radius:'5px'}}/>
+            <img src="" alt="" style={{width:'52px', height:'52px', radius:''}}/>
             <div className='judul-pesanan'>
                 <h1>{ judul }</h1>
             </div>
