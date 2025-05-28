@@ -1,0 +1,29 @@
+.selector-button {
+  background-color: #fbbf24; /* warna kuning-oranye sesuai gambar */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.selector-button:hover {
+  background-color: #f59e0b; /* warna lebih gelap saat hover */
+}
+
+.star-icon {
+  font-size: 18px;       /* Ukuran agak kecil dari teks */
+  color: white;          /* Warna putih seperti gambar */
+  font-weight: 700;      /* Lebih tebal */
+  margin-right: 6px;     /* Jarak ke kanan agar tidak menempel teks */
+  user-select: none;     /* Biar bintang gak bisa di-select */
+  line-height: 1;
+  display: inline-block;
+}

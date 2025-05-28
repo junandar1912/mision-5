@@ -12,7 +12,7 @@ const Cardprofile = () => {
   const fileInputRef = useRef(null)
 
   const handleSave = () => {
-    updateUser({ name, Email, phone });
+    updateUser({ name, Email, phone, photo });
     alert('Profil berhasil disimpan!');
   };
 

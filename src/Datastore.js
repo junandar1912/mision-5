@@ -1,43 +1,72 @@
-// Import fungsi `create` dari Zustand untuk membuat store
+// Datastore.js
 import { create } from 'zustand';
 
-// Fungsi untuk mengambil data user dari localStorage saat pertama kali aplikasi dimuat
+// Path default avatar yang akan dipakai jika user belum punya foto
+const defaultAvatar = "../src/assets/gambar/avatar/avatar(1).svg";
+
+// Fungsi untuk mengambil user dari localStorage saat pertama kali aplikasi dijalankan
+// Di sini kita juga pastikan kalau user tidak punya photo, kita set photo default
 const getInitialUser = () => {
   try {
-    return JSON.parse(localStorage.getItem('registeredUser')) || null; // Ambil data jika ada, kalau tidak, return null
+    const user = JSON.parse(localStorage.getItem('registeredUser'));
+    if (user) {
+      // **Jika user ada tapi belum punya photo, set photo default**
+      if (!user.photo) {
+        user.photo = defaultAvatar;  // <<< Perubahan utama di sini
+      }
+      return user;
+    }
+    // Jika user belum ada di localStorage, buat object user baru dengan photo default
+    return { photo: defaultAvatar };  // <<< Perubahan utama di sini juga
   } catch {
-    return null; // Jika gagal parse, tetap aman
+    // Jika terjadi error parsing, tetap kembalikan user dengan photo default
+    return { photo: defaultAvatar };  // <<< Perubahan utama di sini juga
   }
 };
 
-// Buat store Zustand
 const Datastore = create((set) => ({
-  // State awal: ambil user dari localStorage (jika ada)
   user: getInitialUser(),
-
-  // State login: true jika ada data user di localStorage
   isLoggedIn: !!getInitialUser(),
 
-  // Fungsi untuk menyimpan user baru ke store dan localStorage
   setUser: (userData) => {
-    localStorage.setItem('registeredUser', JSON.stringify(userData)); // Simpan ke localStorage
-    set({ user: userData, isLoggedIn: true }); // Simpan ke Zustand store
+    localStorage.setItem('registeredUser', JSON.stringify(userData));
+    set({ user: userData, isLoggedIn: true });
   },
 
-  // Fungsi untuk memperbarui sebagian data user, seperti nama atau nomor HP
+  // Fungsi updateUser diperbaiki supaya:
+  // - Jika photo tidak dikirim di update, photo lama tetap dipakai
+  // - Jika photo kosong atau null, tetap gunakan photo lama atau default avatar
   updateUser: (updates) =>
     set((state) => {
-      const updatedUser = { ...state.user, ...updates }; // Gabungkan data lama dan yang diperbarui
-      localStorage.setItem('registeredUser', JSON.stringify(updatedUser)); // Simpan yang baru ke localStorage
-      return { user: updatedUser }; // Update di Zustand store
+      const currentUser = state.user || {};
+      const updatedUser = {
+        ...currentUser,
+        ...updates,
+        photo: updates.photo || currentUser.photo || defaultAvatar,  // <<< Perubahan utama di sini
+      };
+      localStorage.setItem('registeredUser', JSON.stringify(updatedUser));
+      return { user: updatedUser };
     }),
 
-  // Fungsi untuk menghapus data user dari store dan localStorage (biasanya saat logout)
   clearUser: () => {
-    localStorage.removeItem('registeredUser'); // Hapus dari localStorage
-    set({ user: null, isLoggedIn: false }); // Reset state di Zustand
+    localStorage.removeItem('registeredUser');
+    set({ user: null, isLoggedIn: false });
   },
+
+  progress: {
+    current: 10,
+    max: 12,
+  },
+
+  setProgress: (newProgress) => set({ progress: newProgress }),
+
+  updateProgressCurrent: (newCurrent) =>
+    set((state) => ({
+      progress: {
+        ...state.progress,
+        current: newCurrent > state.progress.max ? state.progress.max : newCurrent,
+      },
+    })),
 }));
 
-// Ekspor store agar bisa digunakan di komponen lain
 export default Datastore;

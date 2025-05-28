@@ -1,0 +1,43 @@
+.tooltip-container {
+  position: absolute;
+  top: 5%; /* posisi */
+  left: 75%; 
+  background: #fff;
+  padding: 20px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  z-index: 1000;
+}
+
+.tooltip-container strong {
+  font-weight: 700;
+  font-size: 16px;
+  color: #333;
+}
+
+.tooltip-container hr {
+  margin: 12px 0 14px 0;
+  border: 0.5px solid #ddd;
+}
+
+.tooltip-container p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.btn-disabled {
+  display: block;
+  width: 100%;
+  background: #bbb;
+  color: #eee;
+  border: none;
+  padding: 10px 0;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: not-allowed;
+  user-select: none;
+}
+

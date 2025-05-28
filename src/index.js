@@ -18,10 +18,11 @@ import Ubah from "./Page/Ubah/Ubah.jsx";
 import Selesai from "./Page/Pesananselesai/Selesai.jsx";
 import Tertunda from "./Page/Pesananselesai/Tertunda.jsx";
 import Profil from "./Page/Profil/Profil.jsx";
+import Pembelajaran from "./Page/Pembelajaran/Pembelajaran.jsx";
 
 
 
 export { Header, Headerprofile, Footer, Login, Registrasi, Menu, Card, Semuaproduk, 
     Checkbox, Switch, Detail, Headermetode, Step, PaymentMethods, Timer, Bayar, 
-    Ubah, Selesai, Tertunda, Profil
+    Ubah, Selesai, Tertunda, Profil, Pembelajaran
  };
