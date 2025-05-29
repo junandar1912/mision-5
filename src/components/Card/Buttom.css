@@ -1,0 +1,25 @@
+.buttom {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid #3A35411F;
+    background-color: #ffffff;
+    gap: 4px;
+    border-radius: 10px;
+}
+
+.buttom:hover {
+    background-color: #E2FCD966;
+    border: 1px solid #3ECF4C;
+}
+
+.buttom:active {
+    background-color: #E2FCD966;
+    border: 1px solid #3ECF4C;
+}
+
+.btn-container12 {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}

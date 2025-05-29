@@ -4,27 +4,39 @@ import './Daftarvideo.css'
 
 const dataButtom = [{
     id: 1,
-    judul: 'Pengantar Pembelajaran',
-    waktu: '00:05:00',
-    gambar: 'https://img.youtube.com/vi/2g8b0k3j4a4/hqdefault.jpg'
-  },
+    judul: 'Video: Introcuction to HR',
+    waktu: '12 Menit',
+    gambar: '../src/assets/file1.svg' 
+ },
   {
     id: 2,
-    judul: 'Pengantar Pembelajaran',
-    waktu: '00:05:00',
-    gambar: 'https://img.youtube.com/vi/2g8b0k3j4a4/hqdefault.jpg'
+    judul: 'Video: Introcuction to HR',
+    waktu: '12 Menit',
+    gambar: '../src/assets/Play_Circle.svg' 
   },
   {
     id: 3,
-    judul: 'Pengantar Pembelajaran',
-    waktu: '00:05:00',
-    gambar: 'https://img.youtube.com/vi/2g8b0k3j4a4/hqdefault.jpg'
+    judul: 'Video: Introcuction to HR',
+    waktu: '12 Menit',
+    gambar: '../src/assets/Play_Circle.svg' 
   },
   {
     id: 4,
-    judul: 'Pengantar Pembelajaran',
-    waktu: '00:05:00',
-    gambar: 'https://img.youtube.com/vi/2g8b0k3j4a4/hqdefault.jpg'
+    judul: 'Video: Introcuction to HR',
+    waktu: '12 Menit',
+    gambar: '../src/assets/Play_Circle.svg' 
+},
+{
+    id: 5,
+    judul: 'Rangkuman: Introcuction to HR',
+    waktu: '12 Menit',
+    gambar: '../src/assets/file1.svg' 
+},
+{
+    id: 6,
+    judul: 'Video: Introcuction to HR',
+    waktu: '12 Menit',
+    gambar: '../src/assets/file2.svg' 
 }]
 
 
@@ -53,42 +65,29 @@ const Daftarvideo = () => {
 
 
   return (
-    <main className='list-video'>
+    <main className='list-video1'>
       <div className='header-list'>
         <p>Daftar Modul</p>
       </div>
-      <div className='list-button'>
-        <div className='section-header'>
+      <div className='list-button14'>
+        <div className='section-btn'>
             <p className={`title-payment  ${DibukaSection === 'section-1' ? 'active' : ''}`} onClick={()=> DiBuka('section-1')}>Introduction to HR</p>
             <span className={`nav-atm ${DibukaSection === 'section-1' ? 'rotate' : ''}`} onClick={()=> DiBuka('section-1')}></span>
         </div>
-       {DibukaSection === 'section-1' && (<div className="d-bayar">
-        <ul>
+       {DibukaSection === 'section-1' && (<div className="d-bayar1">
+        <ul className='list1-buttom1'>
             {dataButtom.map((item) => (
-                <li key={item.id}>
+                <li key={item.id} className='list-buttom'>
                 <Buttom judul={item.judul} waktu={item.waktu} gambar={item.gambar} />
                 </li>
             ))}
         </ul>
        </div>)}
-       <div className='section-header'>
+       <div className='section-btn'>
             <p className={`title-payment  ${DibukaSection === 'section-2' ? 'active' : ''}`} onClick={()=> DiBuka('section-2')}>Introduction to HR</p>
             <span className={`nav-atm ${DibukaSection === 'section-2' ? 'rotate' : ''}`} onClick={()=> DiBuka('section-2')}></span>
         </div>
-       {DibukaSection === 'section-2' && (<div className="d-bayar">
-        <ul>
-            {dataButtom.map((item) => (
-                <li key={item.id}>
-                <Buttom judul={item.judul} waktu={item.waktu} gambar={item.gambar} />
-                </li>
-            ))}
-        </ul>
-       </div>)}
-       <div className='section-header'>
-            <p className={`title-payment  ${DibukaSection === 'section-3' ? 'active' : ''}`} onClick={()=> DiBuka('section-3')}>Introduction to HR</p>
-            <span className={`nav-atm ${DibukaSection === 'section-3' ? 'rotate' : ''}`} onClick={()=> DiBuka('section-3')}></span>
-        </div>
-       {DibukaSection === 'section-3' && (<div className="d-bayar">
+       {DibukaSection === 'section-2' && (<div className="d-bayar1">
         <ul>
             {dataButtom.map((item) => (
                 <li key={item.id}>

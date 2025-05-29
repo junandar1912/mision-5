@@ -20,9 +20,9 @@ const Headerprogres = () => {
           <p>Foundations of User Experience Design</p>
         </div>
         <div className='nav-head-progres2'>
-          <div className='indikator'>
-            <div className="progress-bar-wrapper">
-              <div className="progress-bar-container">
+          <div className='indikator2'>
+            <div className="progress-bar-wrapper2">
+              <div className="progress-bar-container2">
                 <div className="progress-bar-fill" style={{ width: `${percentage}%` }} />
               </div>
               <div className="progress-text">

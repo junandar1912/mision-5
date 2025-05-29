@@ -1,13 +1,16 @@
 import React from 'react'
+import './Buttom.css'
+
+
 
 const Buttom = ({judul, waktu, gambar}) => {
   return (
     <main className='buttom'>
-      <div className='btn-container'>
+      <div className='btn-container12'>
         <img src={ gambar } alt="" />
-        <p>{ judul }</p>
+        <p className='p-bayar'>{ judul }</p>
       </div>
-      <p>{ waktu }</p>
+      <p className='p-bayar'>{ waktu }</p>
     </main>
   )
 }

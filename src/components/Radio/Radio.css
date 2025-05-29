@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.radio-container {
+.radio-container5 {
     appearance: none;
     -webkit-appearance: none;
     display: flex;
@@ -16,7 +16,7 @@
     gap: 20px;
 }
 
-.radio-label {
+.radio-label11 {
     font-family: 'DM Sans';
     font-weight: 400;
     font-size: 16px;
@@ -24,7 +24,7 @@
     color: #333333AD;
 }
 
-.radio-input {
+.radio-input11 {
     height: 20px;
     width: 20px;
     appearance: none;
@@ -33,7 +33,7 @@
     text-align: center;
 }
 
-.radio-input:checked {
+.radio-input11:checked {
     background-color: #3ecf4c;
     border: 2px solid #3ecf4c;
     box-shadow: #E2FCD9CC 0px 0px 0px 3px inset ;
