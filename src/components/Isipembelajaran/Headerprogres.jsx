@@ -3,6 +3,7 @@ import Datastore from '../../Datastore.js';
 import arrow from '../../assets/arrow.svg';
 import arrowDown from '../../assets/ArrowDown.svg';
 import Tooltip from './Tooltip.jsx';
+import Review from './Review.jsx';
 import './Headerprogres.css';
 
 const Headerprogres = () => {

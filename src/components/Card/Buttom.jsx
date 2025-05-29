@@ -23,16 +23,14 @@ const Buttom = ({judul, waktu, gambar, selesai, onToggleSelesai, path, titleDesc
 
 
   return (
-    <main className='buttom' >
-      <div id={`btn-${id}`}                 // id HTML supaya tombol jelas teridentifikasi
-        className='btn-container12'
+    <main className='buttom' id={`btn-${id}`}                 // id HTML supaya tombol jelas teridentifikasi
         onClick={handleClick}
         role="button"                   // agar aksesibilitas lebih baik
         tabIndex={0}                   // supaya bisa fokus keyboard
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') handleClick()
-        }}
-        >
+        }}>
+      <div className='btn-container12' >
         {selesai ? (
           <Switch label="Selesai" onChange={onToggleSelesai} />
         ) : (

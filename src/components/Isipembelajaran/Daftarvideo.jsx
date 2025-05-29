@@ -21,19 +21,22 @@ Jangan khawatir, total skor tidak akan memengaruhi kelulusan dan penilaian akhir
     id: 2,
     judul: 'Video: Introduction to HR',
     waktu: '12 Menit',
-    gambar: '../src/assets/Play_Circle.svg'
+    gambar: '../src/assets/Play_Circle.svg',
+    path: '/Pembelajaran',
   },
   {
     id: 3,
     judul: 'Video: Introduction to HR',
     waktu: '12 Menit',
-    gambar: '../src/assets/Play_Circle.svg'
+    gambar: '../src/assets/Play_Circle.svg',
+    path: '/Pembelajaran'
   },
   {
     id: 4,
     judul: 'Video: Introduction to HR',
     waktu: '12 Menit',
-    gambar: '../src/assets/Play_Circle.svg'
+    gambar: '../src/assets/Play_Circle.svg',
+    onClick: '/Pembelajaran'
   },
   {
     id: 5,
@@ -130,6 +133,7 @@ const Daftarvideo = ({ onChangeDesc }) => {
                     titleDesc={item.titleDesc}
                     descriptionDesc={item.descriptionDesc}
                     buttonDesc={item.buttonDesc}
+                    path={item.path}
                     judul={item.judul}
                     waktu={item.waktu}
                     gambar={item.gambar}
@@ -169,6 +173,7 @@ const Daftarvideo = ({ onChangeDesc }) => {
                     titleDesc={item.titleDesc}
                     descriptionDesc={item.descriptionDesc}
                     buttonDesc={item.buttonDesc}
+                    path={item.path}
                     judul={item.judul}
                     waktu={item.waktu}
                     gambar={item.gambar}
