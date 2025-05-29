@@ -13,5 +13,82 @@
 .cont-play {
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 78%;
+}
+
+.card-playvideo {
+  display: flex;
+  flex-direction: column;
+  padding: 38px 112px;
+  gap: 24px;
+}
+
+.title-play h1{
+  font-family: 'Poppins';
+  font-size: 20px;
+  font-weight: 600;
+  color: #222325;
+}
+
+.title-play p {
+  font-family: 'DM Sans';
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333AD;
+}
+
+.profil-playvideo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.profil-play {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profil-play h1 {
+  font-family: 'Poppins';
+  font-size: 18px;
+  font-weight: 600;
+  color: #222325;
+}
+
+.profil-play p {
+  font-family: 'DM Sans';
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333AD;
+}
+
+.star-rating-container {
+  background-color: transparent; /* abu-abu */
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 8px;
+}
+
+.star {
+  font-size: 20px;
+  color: #ccc; /* default: abu-abu muda */
+  cursor: pointer;
+  transition: color 0.3s;
+  margin: 0 5px;
+}
+
+.star.active {
+  color: #FFD700; /* kuning emas saat dipilih */
+}
+
+
+.star-rating-container p{
+  font-family: 'DM Sans';
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333AD;
+  text-decoration: underline;
 }

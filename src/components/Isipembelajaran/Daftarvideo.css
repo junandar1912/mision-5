@@ -22,6 +22,10 @@
   border: 1px solid #3A35411F;
 }
 
+.list-buttom.active {
+  background-color: #E2FCD966; /* warna latar buttom aktif, bebas */
+  border-left: 5px solid green;
+}
 /* foooter */
 .selector-button {
   background-color: #fbbf24; /* warna kuning-oranye sesuai gambar */
@@ -52,4 +56,8 @@
   user-select: none;     /* Biar bintang gak bisa di-select */
   line-height: 1;
   display: inline-block;
+}
+
+.gambar-buttom .switch {
+  transform: scale(0.8); /* switch lebih kecil */
 }

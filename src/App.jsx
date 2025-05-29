@@ -12,7 +12,7 @@ import Ubah from "./Page/Ubah/Ubah.jsx";
 import Selesai from "./Page/Pesananselesai/Selesai.jsx";
 import Profil from "./Page/Profil/Profil.jsx";
 import Pembelajaran from "./Page/Pembelajaran/Pembelajaran.jsx";
-
+import Rules from "./Page/Rules/Rules.jsx";
 
 
 const root = document.getElementById("root");
@@ -32,6 +32,7 @@ ReactDOM.createRoot(root).render(
       <Route path="Pesanan Selesai" element={<Selesai/>}/>
       <Route path="Profil" element={<Profil/>}/>
       <Route path="Pembelajaran" element={<Pembelajaran/>}/>
+      <Route path="Rules" element={<Rules/>}/>
     </Routes>
   </BrowserRouter>
 );
