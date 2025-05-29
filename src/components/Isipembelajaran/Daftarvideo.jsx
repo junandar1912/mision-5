@@ -7,7 +7,15 @@ const dataButtom = [
     id: 1,
     judul: 'Video: Introduction to HR',
     waktu: '12 Menit',
-    gambar: '../src/assets/file1.svg'
+    gambar: '../src/assets/file1.svg',
+    titleDesc: 'Aturan',
+    descriptionDesc: `Kerjakan pretest dengan sebaik mungkin untuk mengukur pemahaman awalmu terkait materi yang akan kamu pelajari
+Syarat Nilai Kelulusan: -
+
+Durasi Ujian: 5 Menit
+
+Jangan khawatir, total skor tidak akan memengaruhi kelulusan dan penilaian akhirmu dalam rangkaian kelas ini`,
+    buttonDesc: 'Mulai Pre-test'
   },
   {
     id: 2,
@@ -31,19 +39,33 @@ const dataButtom = [
     id: 5,
     judul: 'Rangkuman: Introduction to HR',
     waktu: '12 Menit',
-    gambar: '../src/assets/file1.svg'
+    gambar: '../src/assets/file1.svg',
+    titleDesc: 'Aturan',
+    buttonDesc: 'Mulai ujian Akhir',
+    descriptionDesc: `Kerjakan ujian akhir dengan sebaik mungkin untuk mengukur pemahamanmu terkait seluruh materi yang telah kamu pelajari
+
+Syarat Nilai Kelulusan: 60%
+
+Kerjakan dengan sebaik mungkin untuk mencapai skor minimal agar kamu bisa mendapatkan sertifikat kelulusan kelas`
   },
   {
     id: 6,
     judul: 'Video: Introduction to HR',
     waktu: '12 Menit',
-    gambar: '../src/assets/file2.svg'
-  }
+    gambar: '../src/assets/file2.svg',
+    titleDesc: 'Aturan',
+    descriptionDesc: `Kerjakan quiz dengan sebaik mungkin untuk mengukur pemahaman terkait materi yang telah kamu pelajari
+
+Syarat Nilai Kelulusan: 60%
+
+Kerjakan dengan sebaik mungkin untuk mencapai skor minimal agar kamu dapat melanjutkan ke modul berikutnya`,
+    buttonDesc: 'Mulai Quiz'
+  },
 ];
 
-const Daftarvideo = () => {
+const Daftarvideo = ({ onChangeDesc }) => {
   const [dibukaSection, setDibukaSection] = useState('section-1');
-  const [buttomAktif, setButtomAktif] = useState(2);
+  const [buttomAktif, setButtomAktif] = useState(1);
   const [buttomSelesai, setButtomSelesai] = useState([]);
 
   const handleBukaSection = (id) => {
@@ -69,6 +91,12 @@ const Daftarvideo = () => {
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
   }, []);
+
+  const handleButtomClick = ({ titleDesc, descriptionDesc, buttonDesc }) => {
+    if (onChangeDesc) {
+      onChangeDesc(titleDesc, descriptionDesc, buttonDesc);
+    }
+  };
 
   return (
     <main className='list-video1'>
@@ -98,12 +126,17 @@ const Daftarvideo = () => {
                   onClick={() => setButtomAktif(item.id)}
                 >
                   <Buttom
+                    id={item.id}
+                    titleDesc={item.titleDesc}
+                    descriptionDesc={item.descriptionDesc}
+                    buttonDesc={item.buttonDesc}
                     judul={item.judul}
                     waktu={item.waktu}
                     gambar={item.gambar}
                     aktif={buttomAktif === item.id}
                     selesai={buttomSelesai.includes(item.id)}
                     onToggleSelesai={() => toggleSelesai(item.id)}
+                    onClick={handleButtomClick}
                   />
                 </li>
               ))}
@@ -132,12 +165,17 @@ const Daftarvideo = () => {
                   onClick={() => setButtomAktif(item.id)}
                 >
                   <Buttom
+                    id={item.id}
+                    titleDesc={item.titleDesc}
+                    descriptionDesc={item.descriptionDesc}
+                    buttonDesc={item.buttonDesc}
                     judul={item.judul}
                     waktu={item.waktu}
                     gambar={item.gambar}
                     aktif={buttomAktif === item.id}
-                     selesai={buttomSelesai.includes(item.id)}
+                    selesai={buttomSelesai.includes(item.id)}
                     onToggleSelesai={() => toggleSelesai(item.id)}
+                    onClick={handleButtomClick}
                   />
                 </li>
               ))}

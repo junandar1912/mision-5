@@ -5,15 +5,34 @@ import { useNavigate } from 'react-router-dom'
 
 
 
-const Buttom = ({judul, waktu, gambar, selesai, onToggleSelesai, path }) => {
+const Buttom = ({judul, waktu, gambar, selesai, onToggleSelesai, path, titleDesc,
+  descriptionDesc, buttonDesc, onClick, id // state yang ingin di lakukan di buttom
+ }) => {
 
-  const navigete = useNavigate()
+  const navigate = useNavigate(); // state navigai
 
+
+  const handleClick = () => {
+    if(onClick) { // perintah menjalankan paragraf
+      onClick({ titleDesc, descriptionDesc, buttonDesc }); 
+    }
+    if(path) { // perintah navigasi
+      navigate(path);
+    }
+  };
 
 
   return (
-    <main className='buttom'>
-      <div className='btn-container12' onClick={() => navigete( path )}>
+    <main className='buttom' >
+      <div id={`btn-${id}`}                 // id HTML supaya tombol jelas teridentifikasi
+        className='btn-container12'
+        onClick={handleClick}
+        role="button"                   // agar aksesibilitas lebih baik
+        tabIndex={0}                   // supaya bisa fokus keyboard
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') handleClick()
+        }}
+        >
         {selesai ? (
           <Switch label="Selesai" onChange={onToggleSelesai} />
         ) : (

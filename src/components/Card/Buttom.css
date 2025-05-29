@@ -22,6 +22,7 @@
     display: flex;
     flex-direction: row;
     gap: 6px;
+    cursor: pointer;
 }
 
 .list-container12.active {
