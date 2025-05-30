@@ -1,0 +1,28 @@
+/* Tombol "Sebelumnya" saat aktif */
+.tombol-sebelumnya {
+  flex: 1;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Default sebelum aktif (disabled) */
+.tombol-sebelumnya:disabled {
+  background-color: #ffffff;
+  color: #999999;
+  cursor: not-allowed;
+}
+
+/* Saat tombol "Sebelumnya" aktif */
+.tombol-sebelumnya:not(:disabled) {
+  background-color: #ffffff; /* putih */
+  color: #2cb34a; /* hijau agar sama tone dengan tombol selanjutnya */
+  border: 1px solid #2cb34a;
+}
+
+.tombol-sebelumnya:not(:disabled):hover {
+  background-color: #e6f1e8; /* hijau muda saat hover */
+}

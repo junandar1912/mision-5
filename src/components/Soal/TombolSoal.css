@@ -1,0 +1,72 @@
+/* Container utama pembungkus tombol dan judul */
+.container-tombol-soal {
+  width: 40%;
+  padding: 20px;
+}
+
+/* Judul List Soal */
+.container-tombol-soal h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Grid untuk tombol soal, 5 kolom, jarak antar tombol 10px */
+.list-tombol {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+/* Style dasar setiap tombol soal */
+.tombol-soal {
+  padding: 10px 0;
+  border: 1px solid #ccc;          /* garis abu-abu */
+  background-color: white;         /* latar putih */
+  cursor: pointer;                 /* kursor pointer saat hover */
+  font-weight: normal;             /* font normal */
+  transition: all 0.3s ease;       /* animasi smooth */
+  border-radius: 4px;              /* sudut membulat */
+  user-select: none;               /* mencegah teks terpilih */
+  position: relative;              /* untuk pseudo element aktif */
+}
+
+/* Efek hover tombol (garis dan warna teks oranye) */
+.tombol-soal:hover {
+  border-color: #ff6b3c;
+  color: #ff6b3c;
+}
+
+/* Style tombol yang aktif */
+.tombol-soal.aktif {
+  background-color: white;         /* background tetap putih */
+  border: 1px solid #FF6B3C;       /* garis oranye */
+  color: #FF6B3C;                  /* teks oranye */
+  font-weight: bold;               /* huruf tebal */
+  position: relative;              /* untuk posisi pseudo element */
+  box-shadow: 4px 4px 0 0 #FF6B3C; /* bayangan oranye kanan bawah */
+  z-index: 1;                     /* pastikan di atas tombol lain */
+}
+
+/* Pseudo-element untuk frame putih dan garis oranye di sudut kiri atas */
+.tombol-soal.aktif::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  background-color: white;               /* latar putih */
+  border-top: 1px solid #FF6B3C;         /* garis oranye atas */
+  border-left: 1px solid #FF6B3C;        /* garis oranye kiri */
+  z-index: 2;                           /* di atas tombol */
+}
+
+/* Kotak catatan di bawah tombol */
+.catatan-soal {
+  padding: 10px;
+  border: 1px solid #00aaff;           /* garis biru */
+  color: #00aaff;                      /* teks biru */
+  border-radius: 4px;                  /* sudut membulat */
+  font-size: 0.9rem;                   /* ukuran font sedikit kecil */
+}

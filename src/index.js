@@ -21,10 +21,14 @@ import Profil from "./Page/Profil/Profil.jsx";
 import Pembelajaran from "./Page/Pembelajaran/Pembelajaran.jsx";
 import Rules from "./Page/Rules/Rules.jsx";
 import Selamat from "./Page/Selamat/Selamat.jsx";
+import Cobakembali from "./Page/Selamat/Cobakembali.jsx";
+import Soal from "./Page/Soal/Soal.jsx";
+
 
 
 
 export { Header, Headerprofile, Footer, Login, Registrasi, Menu, Card, Semuaproduk, 
     Checkbox, Switch, Detail, Headermetode, Step, PaymentMethods, Timer, Bayar, 
-    Ubah, Selesai, Tertunda, Profil, Pembelajaran, Rules, Selamat
+    Ubah, Selesai, Tertunda, Profil, Pembelajaran, Rules, Selamat,Cobakembali,
+    Soal
  };
