@@ -29,7 +29,7 @@ const TombolSoal = ({ jumlahSoal = 10 }) => {
         })}
       </div>
       <div className="catatan-soal">
-        Selesaikan semua soal untuk mengakhiri quiz
+        Selesaikan semua soal untuk <br /> mengakhiri quiz
       </div>
     </div>
   );

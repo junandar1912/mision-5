@@ -9,14 +9,16 @@ export default function Pertanyaan({ page, onPrev, onNext }) {
   };
 
   return (
-    <div className="container-soal">
+    <div className="container-soal20">
+      <main className='judul-pertanyaan1'>
       <h2 className="judul-pertanyaan">Pertanyaan {page.nomor}</h2>
       <p className="deskripsi-pertanyaan">{page.pertanyaan}</p>
 
       <div className="opsi-jawaban">
         {page.opsi.map((opsi, idx) => (
-          <div className="opsi" key={idx}>
+          <button className="opsi1" key={idx}>
             <input
+              className='check'
               type="radio"
               id={`opsi-${idx}`}
               name="jawaban"
@@ -24,10 +26,11 @@ export default function Pertanyaan({ page, onPrev, onNext }) {
               checked={jawaban === opsi}
               onChange={handleChange}
             />
-            <label htmlFor={`opsi-${idx}`}>{opsi}</label>
-          </div>
+            <label htmlFor={`opsi-${idx}`} className='opsi'>{opsi}</label>
+          </button>
         ))}
       </div>
+      </main>
 
       <div className="tombol-navigasi">
         <button
@@ -35,14 +38,14 @@ export default function Pertanyaan({ page, onPrev, onNext }) {
           onClick={onPrev}
           disabled={page.nomor === 1}
         >
-          ← Sebelumnya
+          <span className='panah'>←</span> Sebelumnya
         </button>
         <button
           className="tombol-selanjutnya"
           onClick={() => onNext(jawaban)}
           disabled={!jawaban}
         >
-          Selanjutnya →
+          Selanjutnya <span className='panah'>→</span>
         </button>
       </div>
     </div>

@@ -1,28 +1,102 @@
-/* Tombol "Sebelumnya" saat aktif */
+.container-soal20 {
+  padding: 36px 64px;
+  display: flex;
+  height: 883px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.judul-pertanyaan1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  gap: 24px;
+}
+
+.judul-pertanyaan {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 24px;
+  color: #222325;
+}
+
+.judul-pertanyaan1 p{
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 18px;
+  color: #333333AD;
+}
+
+.opsi-jawaban {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  gap: 10px;
+}
+
+.opsi1 {
+  display: flex;
+  flex-direction: row;
+  padding: 18px;
+  gap: 20px;
+  height: auto;
+  border: 1px solid #3A35411F;
+  background-color: white;
+  justify-content: flex-start;
+}
+
+.opsi {
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 16px;
+  color: #222325;
+}
+
+.tombol-navigasi {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  height: 44px;
+  gap: 16px;
+  width: 100%;
+}
+
 .tombol-sebelumnya {
-  flex: 1;
-  border-radius: 4px;
-  padding: 12px 24px;
+  background-color: #EEEEEE;
+  border: 1px solid #3A354161;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  font-family: 'DM Sans';
   font-weight: 700;
-  cursor: pointer;
-  border: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 16px;
+  color: #3A354161;
 }
 
-/* Default sebelum aktif (disabled) */
-.tombol-sebelumnya:disabled {
-  background-color: #ffffff;
-  color: #999999;
-  cursor: not-allowed;
+.tombol-sebelumnya span {
+  color: #3ECF4C; 
 }
 
-/* Saat tombol "Sebelumnya" aktif */
-.tombol-sebelumnya:not(:disabled) {
-  background-color: #ffffff; /* putih */
-  color: #2cb34a; /* hijau agar sama tone dengan tombol selanjutnya */
-  border: 1px solid #2cb34a;
+.tombol-selanjutnya {
+  background-color: #3ECF4C;
+  border-radius: 10px;
+  border: 1px solid white;
+  color: white;
+   border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
 }
 
-.tombol-sebelumnya:not(:disabled):hover {
-  background-color: #e6f1e8; /* hijau muda saat hover */
+.tombol-selanjutnya span {
+  color: white;
 }

@@ -1,0 +1,23 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container-soal {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.soal11 {
+    width: 28%;
+}
+
+.soal12 {
+    width: 42%;
+}
+
+.soal13 {
+    width: 30%;
+}

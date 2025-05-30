@@ -1,21 +1,25 @@
-/* Container utama pembungkus tombol dan judul */
 .container-tombol-soal {
-  width: 40%;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  padding: 18px 36px;
 }
 
-/* Judul List Soal */
 .container-tombol-soal h3 {
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-family: 'Poppins';
+  font-size: 18px;
+  font-weight: 600;
+  color: #222325;
 }
 
 /* Grid untuk tombol soal, 5 kolom, jarak antar tombol 10px */
 .list-tombol {
   display: grid;
+  height: 120px;
+  width: 100%;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
-  margin-bottom: 12px;
 }
 
 /* Style dasar setiap tombol soal */
@@ -66,7 +70,10 @@
 .catatan-soal {
   padding: 10px;
   border: 1px solid #00aaff;           /* garis biru */
-  color: #00aaff;                      /* teks biru */
+  color: #00aaff;
+  background-color: #EBF9FE;                      /* teks biru */
   border-radius: 4px;                  /* sudut membulat */
-  font-size: 0.9rem;                   /* ukuran font sedikit kecil */
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 600;                   /* ukuran font sedikit kecil */
 }

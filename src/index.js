@@ -23,12 +23,14 @@ import Rules from "./Page/Rules/Rules.jsx";
 import Selamat from "./Page/Selamat/Selamat.jsx";
 import Cobakembali from "./Page/Selamat/Cobakembali.jsx";
 import Soal from "./Page/Soal/Soal.jsx";
-
+import Pertanyaan from "./components/Soal/Pertanyaan.jsx";
+import TombolSoal from "./components/Soal/Tombolsoal.jsx";
+import Daftarvideo from "./components/Isipembelajaran/Daftarvideo.jsx";
 
 
 
 export { Header, Headerprofile, Footer, Login, Registrasi, Menu, Card, Semuaproduk, 
     Checkbox, Switch, Detail, Headermetode, Step, PaymentMethods, Timer, Bayar, 
     Ubah, Selesai, Tertunda, Profil, Pembelajaran, Rules, Selamat,Cobakembali,
-    Soal
+    Soal, Pertanyaan, TombolSoal, Daftarvideo
  };
