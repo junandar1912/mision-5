@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Datastore from '../../Datastore.js';
 import './Login.css'
 
-
+// mas responsive nya belum sama navigasi nya rencana nya mau ntar sore habis kerja
 
 
 
