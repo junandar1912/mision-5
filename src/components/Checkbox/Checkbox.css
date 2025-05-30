@@ -23,6 +23,7 @@
 .check {
     height: 18px;
     width: 18px;
+    border-radius: 5;
     -webkit-appearance: none;
     appearance: none;
     background: #E2FCD9CC;

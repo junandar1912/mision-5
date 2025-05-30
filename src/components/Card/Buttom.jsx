@@ -1,7 +1,13 @@
 import React from 'react'
-import Switch from '../../components/Switch/Switch.jsx'
+import Checkbox from '../Checkbox/Checkbox'
 import './Buttom.css'
 import { useNavigate } from 'react-router-dom'
+
+const RadioData = [{
+  perlihatkan: true,
+  checked: 'checked',
+  disable: true
+}]
 
 
 
@@ -32,7 +38,7 @@ const Buttom = ({judul, waktu, gambar, selesai, onToggleSelesai, path, titleDesc
         }}>
       <div className='btn-container12' >
         {selesai ? (
-          <Switch label="Selesai" onChange={onToggleSelesai} />
+          <Checkbox checked={true} disable={true} perlihatkan={false}  onChange={onToggleSelesai} />
         ) : (
           <img src={gambar} alt="icon" />
         )}

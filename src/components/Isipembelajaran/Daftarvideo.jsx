@@ -1,85 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import Buttom from '../../components/Card/Buttom.jsx';
-import './Daftarvideo.css';
+import React, { useState, useEffect } from 'react'
+import Buttom from '../../components/Card/Buttom.jsx'
+import './Daftarvideo.css'
 
-const dataButtom = [
-  {
-    id: 1,
-    judul: 'Video: Introduction to HR',
-    waktu: '12 Menit',
-    gambar: '../src/assets/file1.svg',
-    titleDesc: 'Aturan',
-    descriptionDesc: `Kerjakan pretest dengan sebaik mungkin untuk mengukur pemahaman awalmu terkait materi yang akan kamu pelajari
-Syarat Nilai Kelulusan: -
-
-Durasi Ujian: 5 Menit
-
-Jangan khawatir, total skor tidak akan memengaruhi kelulusan dan penilaian akhirmu dalam rangkaian kelas ini`,
-    buttonDesc: 'Mulai Pre-test'
-  },
-  {
-    id: 2,
-    judul: 'Video: Introduction to HR',
-    waktu: '12 Menit',
-    gambar: '../src/assets/Play_Circle.svg',
-    path: '/Pembelajaran',
-  },
-  {
-    id: 3,
-    judul: 'Video: Introduction to HR',
-    waktu: '12 Menit',
-    gambar: '../src/assets/Play_Circle.svg',
-    path: '/Pembelajaran'
-  },
-  {
-    id: 4,
-    judul: 'Video: Introduction to HR',
-    waktu: '12 Menit',
-    gambar: '../src/assets/Play_Circle.svg',
-    onClick: '/Pembelajaran'
-  },
-  {
-    id: 5,
-    judul: 'Rangkuman: Introduction to HR',
-    waktu: '12 Menit',
-    gambar: '../src/assets/file1.svg',
-    titleDesc: 'Aturan',
-    buttonDesc: 'Mulai ujian Akhir',
-    descriptionDesc: `Kerjakan ujian akhir dengan sebaik mungkin untuk mengukur pemahamanmu terkait seluruh materi yang telah kamu pelajari
-
-Syarat Nilai Kelulusan: 60%
-
-Kerjakan dengan sebaik mungkin untuk mencapai skor minimal agar kamu bisa mendapatkan sertifikat kelulusan kelas`
-  },
-  {
-    id: 6,
-    judul: 'Video: Introduction to HR',
-    waktu: '12 Menit',
-    gambar: '../src/assets/file2.svg',
-    titleDesc: 'Aturan',
-    descriptionDesc: `Kerjakan quiz dengan sebaik mungkin untuk mengukur pemahaman terkait materi yang telah kamu pelajari
-
-Syarat Nilai Kelulusan: 60%
-
-Kerjakan dengan sebaik mungkin untuk mencapai skor minimal agar kamu dapat melanjutkan ke modul berikutnya`,
-    buttonDesc: 'Mulai Quiz'
-  },
-];
-
-const Daftarvideo = ({ onChangeDesc }) => {
-  const [dibukaSection, setDibukaSection] = useState('section-1');
-  const [buttomAktif, setButtomAktif] = useState(1);
-  const [buttomSelesai, setButtomSelesai] = useState([]);
+const Daftarvideo = ({
+  dataButtom,
+  buttomAktif,
+  setButtomAktif,
+  buttomSelesai,
+  setButtomSelesai,
+  onChangeDesc,
+}) => {
+  const [dibukaSection, setDibukaSection] = useState('section-1')
 
   const handleBukaSection = (id) => {
-    setDibukaSection(prev => (prev === id ? null : id));
-  };
+    setDibukaSection((prev) => (prev === id ? null : id))
+  }
 
   const toggleSelesai = (id) => {
     setButtomSelesai((prev) =>
-      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
-    );
-  };
+      prev.includes(id) ? prev : [...prev, id]
+    )
+  }
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -88,18 +29,18 @@ const Daftarvideo = ({ onChangeDesc }) => {
         !e.target.closest('.d-bayar1') &&
         !e.target.closest('.list-buttom1')
       ) {
-        setDibukaSection(null);
+        setDibukaSection(null)
       }
-    };
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
-  }, []);
-
-  const handleButtomClick = ({ titleDesc, descriptionDesc, buttonDesc }) => {
-    if (onChangeDesc) {
-      onChangeDesc(titleDesc, descriptionDesc, buttonDesc);
     }
-  };
+    document.addEventListener('click', handleClickOutside)
+    return () => document.removeEventListener('click', handleClickOutside)
+  }, [])
+
+  const handleButtomClick = (item) => {
+    if (onChangeDesc) {
+      onChangeDesc(item.titleDesc, item.descriptionDesc, item.buttonDesc)
+    }
+  }
 
   return (
     <main className='list-video1'>
@@ -120,13 +61,19 @@ const Daftarvideo = ({ onChangeDesc }) => {
           ></span>
         </div>
         {dibukaSection === 'section-1' && (
-          <div className="d-bayar1">
+          <div className='d-bayar1'>
             <ul className='list-buttom1'>
               {dataButtom.map((item) => (
                 <li
                   key={item.id}
-                  className={`list-buttom ${buttomAktif === item.id ? 'active' : ''} ${buttomSelesai.includes(item.id) ? 'selesai' : ''}`}
-                  onClick={() => setButtomAktif(item.id)}
+                  className={`list-buttom ${
+                    buttomAktif === item.id ? 'active' : ''
+                  } ${buttomSelesai.includes(item.id) ? 'selesai' : ''}`}
+                  onClick={() => {
+                    setButtomAktif(item.id)
+                    handleButtomClick(item)
+                    
+                  }}
                 >
                   <Buttom
                     id={item.id}
@@ -138,9 +85,6 @@ const Daftarvideo = ({ onChangeDesc }) => {
                     waktu={item.waktu}
                     gambar={item.gambar}
                     aktif={buttomAktif === item.id}
-                    selesai={buttomSelesai.includes(item.id)}
-                    onToggleSelesai={() => toggleSelesai(item.id)}
-                    onClick={handleButtomClick}
                   />
                 </li>
               ))}
@@ -160,13 +104,19 @@ const Daftarvideo = ({ onChangeDesc }) => {
           ></span>
         </div>
         {dibukaSection === 'section-2' && (
-          <div className="d-bayar1">
-            <ul>
+          <div className='d-bayar1'>
+            <ul className='list-buttom1'>
               {dataButtom.map((item) => (
                 <li
                   key={item.id}
-                  className={`list-buttom ${buttomAktif === item.id ? 'active' : ''} ${buttomSelesai.includes(item.id) ? 'selesai' : ''}`}
-                  onClick={() => setButtomAktif(item.id)}
+                  className={`list-buttom ${
+                    buttomAktif === item.id ? 'active' : ''
+                  } ${buttomSelesai.includes(item.id) ? 'selesai' : ''}`}
+                  onClick={() => {
+                    setButtomAktif(item.id)
+                    handleButtomClick(item)
+                    toggleSelesai(item.id); 
+                  }}
                 >
                   <Buttom
                     id={item.id}
@@ -178,9 +128,8 @@ const Daftarvideo = ({ onChangeDesc }) => {
                     waktu={item.waktu}
                     gambar={item.gambar}
                     aktif={buttomAktif === item.id}
-                    selesai={buttomSelesai.includes(item.id)}
+                    selesai={buttomSelesai.includes(item.id)} // untuk merubah ikon sengaja gak  saya hapus buat contoh dan penilai an doang lan
                     onToggleSelesai={() => toggleSelesai(item.id)}
-                    onClick={handleButtomClick}
                   />
                 </li>
               ))}
@@ -188,12 +137,12 @@ const Daftarvideo = ({ onChangeDesc }) => {
           </div>
         )}
       </div>
-      <button className="selector-button">
-        <span className="star-icon">★</span>
+      <button className='selector-button'>
+        <span className='star-icon'>★</span>
         Beri Review & Rating
       </button>
     </main>
-  );
-};
+  )
+}
 
-export default Daftarvideo;
+export default Daftarvideo

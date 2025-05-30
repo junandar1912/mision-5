@@ -10,7 +10,52 @@ const Pembelajaran = () => {
 
   const [rating, setRating] = useState(3);
 
+  const [buttomAktif, setButtomAktif] = useState(null);
+  const [buttomSelesai, setButtomSelesai] = useState([]);
   
+  // Data tombol dummy agar Daftarvideo tidak error
+  const dataButtom = [
+    {
+      id: 1,
+      judul: 'Video Sample',
+      waktu: '10 Menit',
+      gambar: '../src/assets/file1.svg',
+      titleDesc: 'Judul Sample',
+      descriptionDesc: 'Deskripsi sample video',
+      buttonDesc: 'Mulai',
+    },
+    {
+      id: 2,
+      judul: 'Video: Introduction to HR',
+      waktu: '12 Menit',
+      gambar: '../src/assets/Play_Circle.svg',
+    },
+    {
+      id: 3,
+      judul: 'Video: Introduction to HR',
+      waktu: '12 Menit',
+      gambar: '../src/assets/Play_Circle.svg',
+    },
+    {
+      id: 4,
+      judul: 'Video: Introduction to HR',
+      waktu: '12 Menit',
+      gambar: '../src/assets/Play_Circle.svg',
+    },
+    {
+      id: 5,
+      judul: 'Rangkuman: Introduction to HR',
+      waktu: '12 Menit',
+      gambar: '../src/assets/file1.svg',
+    },
+    {
+      id: 6,
+      judul: 'Quiz: Introduction to HR',
+      waktu: '12 Menit',
+      gambar: '../src/assets/file2.svg',
+    }
+  ];
+
 
 
 
@@ -46,7 +91,13 @@ const Pembelajaran = () => {
             </div>
           </div>
         </div>
-        <Daftarvideo />
+        <Daftarvideo
+          dataButtom={dataButtom}
+          buttomAktif={buttomAktif}
+          setButtomAktif={setButtomAktif}
+          buttomSelesai={buttomSelesai}
+          setButtomSelesai={setButtomSelesai}
+         />
       </main>
       <Footerp />
     </>

@@ -20,10 +20,11 @@ import Tertunda from "./Page/Pesananselesai/Tertunda.jsx";
 import Profil from "./Page/Profil/Profil.jsx";
 import Pembelajaran from "./Page/Pembelajaran/Pembelajaran.jsx";
 import Rules from "./Page/Rules/Rules.jsx";
+import Selamat from "./Page/Selamat/Selamat.jsx";
 
 
 
 export { Header, Headerprofile, Footer, Login, Registrasi, Menu, Card, Semuaproduk, 
     Checkbox, Switch, Detail, Headermetode, Step, PaymentMethods, Timer, Bayar, 
-    Ubah, Selesai, Tertunda, Profil, Pembelajaran, Rules
+    Ubah, Selesai, Tertunda, Profil, Pembelajaran, Rules, Selamat
  };
