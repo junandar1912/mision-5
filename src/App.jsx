@@ -14,6 +14,7 @@ import Profil from "./Page/Profil/Profil.jsx";
 import Pembelajaran from "./Page/Pembelajaran/Pembelajaran.jsx";
 import Rules from "./Page/Rules/Rules.jsx";
 import Selamat from "./Page/Selamat/Selamat.jsx";
+import Cobakembali from "./Page/Selamat/Cobakembali.jsx";
 
 
 const root = document.getElementById("root");
@@ -35,6 +36,7 @@ ReactDOM.createRoot(root).render(
       <Route path="Pembelajaran" element={<Pembelajaran/>}/>
       <Route path="Rules" element={<Rules/>}/>
       <Route path="Selamat" element={<Selamat/>}/>
+      <Route path="Coba-kembali" element={<Cobakembali/>}/>
     </Routes>
   </BrowserRouter>
 );

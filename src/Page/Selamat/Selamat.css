@@ -1,0 +1,172 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container-selamat {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hasil-soal {
+    display: flex;
+    flex-direction: column;
+    padding: 36px 112px;
+    gap: 24px;
+}
+
+.titel-selamat {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.titel-selamat h1 {
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 600;
+    color: #222325;
+}
+
+.titel-selamat p {
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333AD;
+}
+
+.isi-selamat {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 95px;
+    border: 1px solid #3A35411F;
+}
+
+.nilai-selamat1 {
+    padding: 18px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #38D189;
+    width: 100%;
+}
+
+
+.nilai-selamat1 h1{
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffff;
+}
+
+.nilai-selamat1 p {
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffff;
+}
+
+.nilai-selamat {
+    padding: 18px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    width: 100%;
+}
+
+.nilai-selamat h1 {
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333AD;
+}
+
+.nilai-selamat p {
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-weight: 600;
+    color: #222325;
+}
+
+.icon-benar {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 29px;
+}
+
+.icon-benar p{
+    vertical-align: middle;
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-weight: 600;
+    color: #222325;
+    line-height: 120%;
+}
+
+.footer-selamat {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-selamat h1{
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 600;
+    color: #222325;
+}
+
+.footer-selamat p {
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333AD;
+}
+/* page ulaang */
+.btn-ulangi {
+    width: 166px;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    width: 15%;
+    gap: 10px;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid #3ECF4C;
+}
+
+.btn-ulangi p{
+    color: #3ECF4C;
+    font-family: 'DM Sans';
+    font-size: 16px;
+}
+
+.ulang {
+    padding: 18px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #FF5C2B;
+    width: 100%;
+}
+
+
+.ulang h1{
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffff;
+}
+
+.ulang p{
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffff;
+}

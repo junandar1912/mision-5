@@ -8,7 +8,7 @@ import './selamat.css'
 
 
 
-const Selamat = () => {
+const Cobakembali = () => {
 
   
   
@@ -65,15 +65,15 @@ const Selamat = () => {
      <Headerprogres />
      <main className='body1'>
         <div className='container-selamat'>
-          <img src="../src/assets/selamat.svg" alt="" />
+          <img src="../src/assets/Gagal.svg" alt="" />
           <form className='hasil-soal'>
             <div className='titel-selamat'>
               <h1>Tanggal Pretest: </h1>
               <p>23 September 2022, 10:20 AM</p>
             </div>
             <div className='isi-selamat'>
-              <div className='nilai-selamat1'>
-                <h1>Nial</h1>
+              <div className='ulang'>
+                <h1>Nilai</h1>
                 <p>100</p>
               </div>
               <div className='nilai-selamat'>
@@ -101,6 +101,10 @@ const Selamat = () => {
               <h1>Selesai!</h1>
               <p>Pretest sudah selesai dan kami sudah mengetahui progresmu. <br /><br />
               Saatnya memulai kelas!</p>
+              <button className='btn-ulangi'>
+                <img src="../src/assets/ulang.svg" alt="" />
+                <p>Ulangi Quiz</p>
+              </button>
             </div>
           </form>
         </div>
@@ -117,4 +121,4 @@ const Selamat = () => {
   )
 }
 
-export default Selamat
+export default Cobakembali
