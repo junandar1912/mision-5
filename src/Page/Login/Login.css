@@ -7,17 +7,21 @@
 .login-body {
     background-color: #FFFDF3;
     font-family: 'Poppins', 'Dm sans';
-    justify-items: center; 
-    padding: 5%;
+    justify-items: center;
+    padding-top: 2%;
+    padding-bottom: 7%;
+    width: 100%;
+    height: auto; 
 }
 
 .container-login {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 20px;
     padding: 46px;
-    height: 650px;
-    width: 590px;
+    width: 30%;
+    height: 617px;
     background-color: #ffff;
 }
 
@@ -26,7 +30,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 67px;
+    height: auto;
     gap: 10px;
 }
 
@@ -47,6 +51,7 @@
 .my-form {
     display: flex;
     flex-direction: column;
+    gap: 20px;
     width: 100%;
     height: 944px;
 }
@@ -96,11 +101,6 @@ a {
     color: #333333AD;
     margin-top: 10px;
     cursor: pointer;
-}
-
-.tombol {
-    margin-top: 24px;
-    margin-bottom: 24px;
 }
 
 button {
@@ -159,4 +159,27 @@ button {
     font-family: 'DM Sans';
     font-weight: 700;
     font-size: 15px;
+}
+
+@media screen and (max-width: 500px), screen and (max-width: 350px), screen and (max-width: 700px) 
+{
+    .login-body {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 24px;
+        padding-bottom: 40px;
+    }
+    .container-login {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        width: 100%;
+        height: 800px;
+    }
+    .tittle {
+        gap: 10px;
+    }
+    h1 {
+        font-size: 24px;
+    }
 }

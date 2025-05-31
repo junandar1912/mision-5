@@ -10,9 +10,9 @@ const Footer = () => {
                     <img src='../src/assets/gambar/logo.svg' alt='logo' className='img-foot'/>
                     <h1 className='foot-titel'>Gali Potensi Anda Melalui Pembelajaran Video di hariesok.id!</h1>
                     <p className='alamat'>Jl. Usman Effendi No. 50 Lowokwaru, Malang</p>
-                    <p className='no'>+62-877-7123-1234</p>
+                    <p className='no-footer-main'>+62-877-7123-1234</p>
                 </div>
-                <div className="navigator">
+                <div className="navigator-footer1">
                     <ul className="navi-footer">
                         <li className="isi-navigator">
                             <button href="#" className="nav-foot">Kategori</button>
@@ -42,9 +42,12 @@ const Footer = () => {
                    </ul>
                 </div>
             </div>
-            <div className='divider'>
-                <br />
+            <div className='hide'>
+                <button className='nav-footer1'><p>Perusahaan</p><img src="../src/assets/Iconfooter.svg" alt="" /></button>
+                <button className='nav-footer1'><p>Perusahaan</p><img src="../src/assets/Iconfooter.svg" alt="" /></button>
+                <button className='nav-footer1'><p>Komunitas</p><img src="../src/assets/Iconfooter.svg" alt="" /></button>
             </div>
+            <div className='divider'></div>
             <div className='media-sosial'>
             <div className="text">
                 <p>@2023 Gerobak Sayur All Rights Reserved.</p>

@@ -2,6 +2,7 @@ import React from 'react'
 import Headermenu from '../../components/Header/Headermenu.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import Card from '../../components/Card/Card.jsx'
+import { useNavigate } from 'react-router'
 import './Menu.css'
 
 const cardData = [
@@ -107,6 +108,10 @@ const cardData = [
 ];
 
 const Menu = () => {
+
+  const navigate = useNavigate()
+
+
   return (
     <>
     <Headermenu />
@@ -133,7 +138,7 @@ const Menu = () => {
           <div className='draft'>
            <ul>
             {cardData.map((item, index) => (
-              <li key={index}>
+              <li key={index} onClick={()=> navigate ('/Detail') }>
               <Card
               image={item.image}
               title={item.title}

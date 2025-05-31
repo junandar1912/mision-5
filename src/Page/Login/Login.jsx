@@ -57,6 +57,7 @@ const Login = () => {
           <p className='ke-2'>Yuk, lanjutin belajarmu di videobelajar.</p>
         </div>
         <form className="my-form" onSubmit={(e) => e.preventDefault()}>
+          <div>
           <label htmlFor="e-mail">E-mail<span>*</span></label>
           <input type="text" id='Email'  value={Email} onChange={(e) => setEmail(e.target.value)}/>
           <label htmlFor="password">Kata Sandi<span>*</span></label>
@@ -65,6 +66,7 @@ const Login = () => {
             <span className='icon-toogle' onClick={() => setShowPassword(!showPassword)}>
               <i className={`fas ${showPassword ? 'fa-eye' : 'fa-eye-slash'}`}></i>
               </span>
+          </div>
           </div>
           <a href="http://">Lupa Password?</a>
         <div className='tombol'>

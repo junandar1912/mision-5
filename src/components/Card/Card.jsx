@@ -2,7 +2,11 @@ import React from 'react'
 import './card.css'
 
 
+
 const Card = ({image, title, avatar, description, instructor, reviews, rating, price, job,}) => {
+
+
+
     return (
         <main className="course-card">
           <div className='screen'>
