@@ -3,7 +3,7 @@ import './Header.css'
 
 const Header = () => {
   return (
-    <header>
+    <header className='header100'>
       <div className='nav'>
         <div className='logo'>
           <img src="../src/assets/gambar/logo.svg" className='photo' />

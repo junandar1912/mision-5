@@ -1,8 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 import './Carddesc.css'
 
 
 const Carddes = ({perlihatkan, Harga, Diskon, Count, gambar, terlihat}) => {
+
+  const navigate = useNavigate()
+
   return (
       <div className='desc-button'>
           <div className='t-produk'>
@@ -17,7 +21,7 @@ const Carddes = ({perlihatkan, Harga, Diskon, Count, gambar, terlihat}) => {
             </div>
             <p className='p2-button'>Penawaran spesial tersisa 2 hari lagi!</p>
           </div>
-          {perlihatkan && <button className='button-produk'>Beli Sekarang</button>}
+          {perlihatkan && <button className='button-produk' onClick={()=> navigate('/Bayar')}>Beli Sekarang</button>}
           <div className='isi-card'>
             <p className='t-isi'>Kelas Ini Sudah Termasuk</p>
             <div className='isi-kartu'>

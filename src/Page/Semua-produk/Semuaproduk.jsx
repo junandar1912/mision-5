@@ -5,6 +5,7 @@ import Card from '../../components/Card/Card.jsx'
 import Checkbox from '../../components/Checkbox/Checkbox.jsx'
 import Radio from '../../components/Radio/Radio.jsx'
 import Switch from '../../components/Switch/Switch.jsx'
+import { useNavigate } from 'react-router'
 import './Semuaproduk.css'
 
 const cardData = [
@@ -91,6 +92,8 @@ const RadioOptions = [
 
 
 const Semuaproduk = () => {
+
+  const navigate = useNavigate()
 // tombol dropdown
   const [open, setopen] = useState(false);
 
@@ -126,7 +129,7 @@ const Semuaproduk = () => {
   return (
     <>
     <Headerprofile/>
-    <div className='body'>
+    <div className='body-semua'>
         <div className='judul-detail'>
             <h1 className='j1-detail'>Koleksi Video Pembelajaran Unggulan</h1>
             <p className='j2-detail'>Jelajahi Dunia Pengetahuan Melalui Pilihan Kami!</p>
@@ -140,7 +143,7 @@ const Semuaproduk = () => {
               <div className='desc-nav'>
                 <div>
                   <button className='dropdown-filter' onClick={()=> setopen(!open)} ref={TombolRef}>
-                    <img src="" alt="" ref={DropdownrRef}/>Bidang studi
+                    <img src="../src/assets/gambar/Notebook.svg" alt="" ref={DropdownrRef} className='Logosemua'/>Bidang studi
                   </button>
                 {open&&<div>
                     <ul className='pilihan'>
@@ -152,13 +155,13 @@ const Semuaproduk = () => {
                           defaultChecked={item.defaultChecked}
                           />
                         </li>
-                      ))};
+                      ))}
                     </ul>
-                  </div>};
+                  </div>}
                 </div>
                 <div>
                   <button className='dropdown-filter' onClick={()=> setopen(!open)} ref={TombolRef}>
-                    <img src="" alt="" ref={DropdownrRef}/>Harga
+                    <img src="../src/assets/gambar/Shopping_Bag_01.svg" alt="" ref={DropdownrRef} className='Logosemua'/>Harga
                   </button>
                 {open&&<div>
                   <ul className='pilihan'>
@@ -170,13 +173,13 @@ const Semuaproduk = () => {
                           defaultChecked={item.defaultChecked}
                           />
                         </li>
-                      ))};
+                      ))}
                     </ul>
                     </div>}
                 </div>
                 <div>
                   <button className='dropdown-filter' onClick={()=> setopen(!open)} ref={TombolRef}>
-                    <img src="" alt="" ref={DropdownrRef}/>Durasi
+                    <img src="../src/assets/gambar/Clock.svg" alt="" ref={DropdownrRef} className='Logosemua'/>Durasi
                   </button>
                 {open&&<div>
                     <ul className='pilihan'>
@@ -188,7 +191,7 @@ const Semuaproduk = () => {
                         handleRadioChange={handleRadioChange}
                         checked={selectedDurasi === item.value}
                         />
-                      </li>))};
+                      </li>))}
                     </ul>
                   </div>}
                 </div>
@@ -215,7 +218,7 @@ const Semuaproduk = () => {
               <div className='card-container'>
                   <ul className='card-page'>
                     {cardData.map((item,index)=>(
-                    <li key={index}>
+                    <li key={index} onClick={()=> navigate('/Detail')}>
                       <Card
                       image={item.image}
                       title={item.title}
@@ -228,7 +231,7 @@ const Semuaproduk = () => {
                       job={item.job}
                       />
                     </li>
-                  ))};
+                  ))}
                   </ul>
               </div>
               <div className="nomor-page">

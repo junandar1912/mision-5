@@ -49,7 +49,7 @@ const Registrasi = () => {
     <div className='body-regis'>
       <div className='main-regis'>
         <div className='tittle'>
-          <p className='h1'>Pendaftaran Akun</p>
+          <p className='h11'>Pendaftaran Akun</p>
           <p className='p'>Yuk, daftarkan akunmu sekarang juga!</p>
         </div>
         <form action="my-form" onSubmit={handleSubmit}>

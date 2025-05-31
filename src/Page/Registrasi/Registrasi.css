@@ -13,7 +13,7 @@
 
 .main-regis {
     background-color: #ffffff;
-    width: 590px;
+    width: 35%;
     height: 893px;
     border: 1px solid #f1f1f1;
     border-radius: 4px;
@@ -31,7 +31,7 @@
     margin-bottom: 38px;
 }
 
-.h1 {
+.h11 {
     font-family: 'Poppins';
     font-weight: 600;
     font-size: 32px;
@@ -72,7 +72,7 @@ input:focus {
     flex-direction: row;
     gap: 10px;
     padding: 5px;
-    border: 1px solid #f1f1f1;
+    border: 1px solid transparent;
 }
 
 .konfirmasi {
@@ -80,7 +80,8 @@ input:focus {
     flex-direction: row;
     gap: 10px;
     padding: 5px;
-    border: 1px solid #f1f1f1;
+    border: 1px solid transparent;
+    margin-bottom: 10px;
 }
 
 .password-regis {
@@ -155,4 +156,21 @@ button {
 .page-no:focus {
     border: 1px solid transparent;
     outline: none;
+}
+
+@media screen and (max-width: 500px), screen and (max-width: 350px), screen and (max-width: 700px) 
+{
+    .body-regis {
+        padding: 20px 28px;
+    }
+    .main-regis {
+        width: 100%;
+        height: auto;
+    }
+    .h11 {
+        font-size: 20px;
+    }
+    .p {
+        font-size: 14px;
+    }
 }

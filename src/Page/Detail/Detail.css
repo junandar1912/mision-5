@@ -5,6 +5,15 @@
     font-family: "DM Sans, Poppins";
 }
 
+.body-detail{
+    background-color: #FFFDF3;
+    padding: 64px 120px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 64px;
+}
+
 .Breadcrumb {
     display: flex;
     flex-direction: row;
@@ -12,7 +21,17 @@
     width: 100%;
     gap: 5px;
     padding: 2px;
+    
 }
+
+.link-Detail {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 700px; /* sesuaikan */
+    cursor: pointer;
+}
+
 
 .link-detail {
     color: #333333AD;
@@ -24,6 +43,8 @@
     text-align: center;
 }
 
+
+
 .d-span {
     color: #333333AD;
     font-family: "DM Sans";
@@ -33,7 +54,7 @@
     letter-spacing: 0.2px;
 }
 
-.p-produk-header {
+.link-detail:active {
     color: #222325;
     font-family: "DM Sans";
     font-weight: 400;
@@ -51,6 +72,7 @@
     background-position: center;
     background-size: cover;
     padding: 82px 100px;
+    border-radius: 10px;
     gap: 24px;
     display: flex;
     flex-direction: column;
@@ -184,6 +206,11 @@
 }
 
 .span-drop {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 700px; /* sesuaikan */
+    cursor: pointer;
     color: #3ECF4C;
     font-family: 'Poppins';
     font-size: 16px;
@@ -241,4 +268,74 @@
     flex-direction: row;
     gap: 10px;
     list-style: none;
+}
+
+@media screen and (max-width: 500px), screen and (max-width: 350px), screen and (max-width: 700px)
+{
+    .body-detail {
+        padding: 20px 24px;
+        width: 100%;
+        height: auto;
+    }
+    .link-Detail {
+        display: inline;
+        overflow: hidden;
+        gap: 10px;
+        width: 100%;
+    }
+    .Breadcrumb {
+        width: 100%;
+    }
+    .titel-produk {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    .p-produk {
+        font-size: 24px;
+    }
+    .p2-produk {
+        font-size: 14px;
+    }
+    .produk-main {
+        display: flex;
+        flex-direction: column;
+    }
+    .desc-produk {
+        flex-direction: column;
+        width: 100%;
+    }
+    .t-p-head {
+        font-size: 18px;
+    }
+    .p-desc-produk {
+        font-size: 14px;
+    }
+    .p1-desc-propil {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .avatar-desc {
+        width: 40px;
+        height: 40px;
+    }
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+    }
+    .produk-lain {
+        display: flex;
+        flex-direction: column;
+    }
+    .video {
+        display: none;
+    }
+    .play {
+        display: none;
+    }
+    .b-p {
+        font-size: 14px;
+    }
 }

@@ -54,7 +54,7 @@ const cardData = [
 
 const Detail = () => {
 
-
+  const navigate = useNavigate()
   const [openDropdownId, setOpenDropdownId] = useState(null);
   
   const toggleDropdown = (id) => {
@@ -75,13 +75,13 @@ const Detail = () => {
   return (
     <>
     <Headerprofile/>
-    <div className='body'>
+    <main className='body-detail'>
       <div className='Breadcrumb'>
         <a href="" className='link-Detail'>Beranda</a>
         <span className='d-span'>/</span>
         <a href="" className='link-Detail'>Desain</a>
         <span className='d-span'>/</span>
-        <p className='p-produk-header'>Gapai Karier Impianmu sebagai Seorang UI/UX Designer & Product Manager.</p>
+        <a className='link-Detail'>Gapai Karier Impianmu sebagai Seorang UI/UX Designer & Product Manager.</a>
       </div>
       <div className='titel-produk'>
         <h1 className='p-produk'>Gapai Karier Impianmu sebagai Seorang<br/> UI/UX Designer & Product Manager.</h1>
@@ -93,7 +93,7 @@ const Detail = () => {
         {Carddesdata.map((item,index) => (
         <div className='detail-card 'key={index}>
           <Carddes 
-          perlihatkan={item.perlihatkan}
+          perlihatkan={item.perlihatkan} onClick={()=> navigate('/Bayar')}
           Harga={item.Harga}
           Diskon={item.Diskon}
           Count={item.Count}
@@ -109,7 +109,7 @@ const Detail = () => {
             <div className='p1-desc-propil'>
               <div className='profil-1'>
                 <div className='flex-row'>
-                  <img src="../src/assets/gambar/avatar/Avatar(1).svg" alt="" />
+                  <img src="../src/assets/gambar/avatar/Avatar(1).svg" alt="" className='avatar-desc'/>
                   <div>
                     <p className='d-name-profil'>Gregorius Edrik Lawanto</p>
                     <p className='d-job-profil'>Senior Talent Acquisition di Wingsgroup</p>
@@ -119,7 +119,7 @@ const Detail = () => {
               </div>
               <div className='profil-1'>
                 <div className='flex-row'>
-                  <img src="../src/assets/gambar/avatar/Avatar(1).svg" alt="" />
+                  <img src="../src/assets/gambar/avatar/Avatar(1).svg" alt="" className='avatar-desc' />
                   <div>
                     <p className='d-name-profil'>Gregorius Edrik Lawanto</p>
                     <p className='d-job-profil'>Senior Talent Acquisition di Wingsgroup</p>
@@ -134,7 +134,7 @@ const Detail = () => {
             <div className='descriiption-button'>
               <div className="but-1" id="dropdown-container">
                 <p className={`span-drop ${openDropdownId === 'dropdown-3' ? 'active' : ''}`}onClick={()=>toggleDropdown('dropdown-3')}>Introduction to Course 1: Foundations of User Experience Design</p>
-                <span className={`arrow ${openDropdownId === 'dropdown-3' ? 'rotate' : ''}`}>1</span>
+                <span className={`arrow ${openDropdownId === 'dropdown-3' ? 'rotate' : ''}`}></span>
               </div>
               {openDropdownId === 'dropdown-3' && (
                 <div className="dropdown-content">
@@ -180,7 +180,7 @@ const Detail = () => {
               )}
               <div className="but-1" id="dropdown-container">
                 <p className={`span-drop ${openDropdownId === 'dropdown-2' ? 'active' : ''}`}onClick={()=>toggleDropdown('dropdown-2')}>Universal design, inclusive design, and equity-focused design</p>
-                <span className={`arrow ${openDropdownId ? 'rotate' : ''}`}>1</span>
+                <span className={`arrow ${openDropdownId ? 'rotate' : ''}`}></span>
               </div>
               {openDropdownId === 'dropdown-2' && (
                 <div className="dropdown-content">
@@ -226,7 +226,7 @@ const Detail = () => {
               )}
               <div className="but-1" id="dropdown-container">
                 <p className={`span-drop ${openDropdownId === 'dropdown-1' ? 'active' : ''}`}onClick={()=> toggleDropdown('dropdown-1')}>Introduction to design sprints</p>
-                <span className={`arrow ${openDropdownId === 'dropdown-1' ? 'rotate' : ''}`}>1</span>
+                <span className={`arrow ${openDropdownId === 'dropdown-1' ? 'rotate' : ''}`}></span>
               </div>
               {openDropdownId === 'dropdown-1' && (
                 <div className="dropdown-content">
@@ -272,7 +272,7 @@ const Detail = () => {
               )}
               <div className="but-1" id="dropdown-container">
                 <p className={`span-drop ${openDropdownId === 'dropdown-4' ? 'active' : ''}`}onClick={()=>toggleDropdown('dropdown-4')}>Introduction to UX research</p>
-                <span className={`arrow ${openDropdownId === 'dropdown-4' ? 'rotate' : ''}`}>1</span>
+                <span className={`arrow ${openDropdownId === 'dropdown-4' ? 'rotate' : ''}`}></span>
               </div>
               {openDropdownId === 'dropdown-4' && (
                 <div className="dropdown-content">
@@ -367,7 +367,7 @@ const Detail = () => {
             </ul>
         </div>
       </div>
-    </div>
+    </main>
     <Footer/>
     </>
   )

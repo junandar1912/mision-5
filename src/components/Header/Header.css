@@ -5,53 +5,24 @@
 }
 
 
-header {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    flex-direction: row;
-    padding: 12px 120px;
-    justify-content: space-between;
-    background-color: #FFFFFF;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    height: 56px;
-    width: 1120px;
-    justify-content: space-between;
-}
-
-.logo {
-    width: 237px;
-    height: 56px;
-    padding: 13px 22px;
-}
-
-.photo {
-    width: 194px;
-    height: 30px;
-}
-
-
 @media screen and (max-width: 500px), screen and (max-width: 350px), screen and (max-width: 700px) {
 
 
-header {
+.header100 {
+    display: flex;
+    padding-bottom: 20px;
+    flex-direction: row;
     border: 1px solid #F1F1F1;
-    padding: 16px 24px;
     box-shadow:0px 4px 6px #3E434A4F;
 }
 
-.nav-menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.nav{
+    align-self: flex-start;
+    height: auto;
     width: 100%;
 }
 
-.logo-menu {
+.logo {
     height: 42px;
     width: 152px;
 }
