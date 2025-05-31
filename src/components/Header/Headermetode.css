@@ -33,3 +33,27 @@ header {
     list-style: none;
     gap: 10px;
 }
+
+
+@media screen and (max-width: 500px), screen and (max-width: 350px), screen and (max-width: 700px) {
+
+
+header {
+    border: 1px solid #F1F1F1;
+    padding: 16px 24px;
+    box-shadow:0px 4px 6px #3E434A4F;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo-menu {
+    height: 42px;
+    width: 152px;
+}
+
+}

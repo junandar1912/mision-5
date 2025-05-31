@@ -4,12 +4,13 @@ import './card.css'
 
 const Card = ({image, title, avatar, description, instructor, reviews, rating, price, job,}) => {
     return (
-        <div className="course-card">
+        <main className="course-card">
+          <div className='screen'>
           <img src={image} alt={title} className="course-image" />
           <div className="course-content">
             <h3 className="course-title">{title}</h3>
             <p className="course-description">{description}</p>
-            <div className="course-instructor">
+            <div className="course-instructor01">
               <img src={avatar} alt={instructor} className="instructor-avatar" />
               <div className='course-profil'>
                <p className="instructor-name">{instructor}</p>
@@ -19,7 +20,9 @@ const Card = ({image, title, avatar, description, instructor, reviews, rating, p
                </div>
               </div>
             </div>
-            <div className="course-rating">
+          </div>
+          </div>
+          <div className="course-rating">
               <div className='rating'>
                <span className="star">
                 <i className='fa fa-star checked'></i>
@@ -35,8 +38,7 @@ const Card = ({image, title, avatar, description, instructor, reviews, rating, p
               </div>
               <div className="course-price"><p className='price'>{price}</p></div>
             </div>
-          </div>
-        </div>
+        </main>
       );
     }
 

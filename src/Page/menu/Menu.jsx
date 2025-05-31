@@ -110,7 +110,7 @@ const Menu = () => {
   return (
     <>
     <Headermenu />
-    <div className='body'>
+    <div className='body-menu'>
         <div className='head'>
             <div className='paragraf'>
                 <h1 className='p1-head'>Revolusi Pembelajaran: Temukan Ilmu Baru melalui Platform Video Interaktif!</h1>
@@ -150,8 +150,8 @@ const Menu = () => {
            </ul>
           </div>
         </div>
-        <div className='footer-container'>
-          <div className='fot-con'>
+        <div className='footer-container12'>
+          <div className='fot-con-menu'>
             <div className='judul-fot'>
               <p className='p1-fot'>NEWSLETTER</p>
               <div className='j-ctr'>
@@ -166,7 +166,7 @@ const Menu = () => {
           </div>
         </div>
     </div>
-    <Footer />
+    <Footer/>
     </>
   )
 }
