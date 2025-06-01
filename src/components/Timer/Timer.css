@@ -34,3 +34,12 @@
     color: #4a4a4a;
   }
   
+  @media screen and (max-width: 500px), screen and (max-width: 350px), screen and (max-width: 700px)
+{
+  .timer-container {
+    padding: 12px;
+  }
+  .timer-text {
+    font-size: 12px;
+  }
+}

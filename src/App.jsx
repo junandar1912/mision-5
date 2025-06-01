@@ -39,6 +39,7 @@ ReactDOM.createRoot(root).render(
       <Route path="Selamat" element={<Selamat/>}/>
       <Route path="Coba-kembali" element={<Cobakembali/>}/>
       <Route path="Quiz" element={<Soal/>}/>
+      <Route path="Selesai" element={<Selesai/>}/>
     </Routes>
   </BrowserRouter>
 );

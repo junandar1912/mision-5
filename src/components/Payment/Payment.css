@@ -96,3 +96,11 @@
     height: 8px;
     border-radius: 50%;
   }
+
+  @media screen and (max-width: 500px), screen and (max-width: 350px), screen and (max-width: 700px)
+{
+    .paymen-methods{
+        width: 100%;
+    }
+    
+}

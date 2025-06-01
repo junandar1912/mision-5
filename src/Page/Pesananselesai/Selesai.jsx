@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import './Selesai.css'
 
 const Selesai = () => {
+
+  const navigate = useNavigate()
+
   return (
     <>
       <Headerselesai/>
@@ -12,8 +15,9 @@ const Selesai = () => {
           <img src="../src/assets/online-shopping-female 1.svg" alt="detail pesanan" className='img-notif'/>
           <div className='p-selesai'>
             <h1 className='title-selesai'>Pembayaran Berhasil!</h1>
-            <p className=''>Silakan cek email kamu untuk informasi lebih lanjut. Hubungi kami jika ada kendala.</p>
-            <button className='lihat-detail'>Lihat Detail Pesanan</button>
+            <p>Silakan cek email kamu untuk informasi lebih lanjut. Hubungi kami jika ada kendala.</p>
+            <button className='lihat-detail' onClick={()=> navigate('/Profil')}>
+              Lihat Detail Pesanan</button>
           </div>
         </div>
       </main>

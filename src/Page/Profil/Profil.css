@@ -109,3 +109,7 @@
 .b-profil:not(.active):hover img {
   filter: none;
 }
+
+footer {
+  display: block;
+}

@@ -36,3 +36,27 @@
     gap: 20px;
 }
 
+footer {
+    display: none;
+}
+
+@media screen and (max-width: 500px), screen and (max-width: 350px), screen and (max-width: 700px)
+{
+    footer {
+        display: block;
+    }
+    .body {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 24px;
+    }
+    .metode {
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+    }
+    .metode-container {
+        width: 100%;
+    }
+}

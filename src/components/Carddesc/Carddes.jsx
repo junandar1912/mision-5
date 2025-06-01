@@ -21,7 +21,7 @@ const Carddes = ({perlihatkan, Harga, Diskon, Count, gambar, terlihat}) => {
             </div>
             <p className='p2-button'>Penawaran spesial tersisa 2 hari lagi!</p>
           </div>
-          {perlihatkan && <button className='button-produk' onClick={()=> navigate('/Bayar')}>Beli Sekarang</button>}
+          {perlihatkan && <button className='button-produk' onClick={()=> navigate('/Metode')}>Beli Sekarang</button>}
           <div className='isi-card'>
             <p className='t-isi'>Kelas Ini Sudah Termasuk</p>
             <div className='isi-kartu'>

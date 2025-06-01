@@ -29,9 +29,8 @@
     flex-grow: 0;
 }
 
-.image-bank {
-    align-self: center;
-}
+
+
 
 .title-payment {
     color: #222325;
@@ -88,7 +87,15 @@
 
 /*font */
 
-.p-ringkasan .h-ringkasan {
+.h-ringkasan {
+    font-family: 'DM Sans';
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    color: #333333AD;
+}
+
+.p-ringkasan {
     font-family: 'DM Sans';
     font-size: 18px;
     font-weight: 400;
@@ -119,4 +126,47 @@ span {
     font-weight: 700;
     font-size: 18px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 500px), screen and (max-width: 350px), screen and (max-width: 700px)
+{
+    .Ringkasan {
+        width: 100% !important;
+        height: auto;
+    }
+    .bank-kode {
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+        height: auto;
+    }
+    .image-bank {
+        height: 36px;
+        width: 117px;
+        align-self: center;
+    }
+    .nama-bank {
+        font-size: 18px;
+    }
+    .kode-bank {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .title-payment {
+        font-size: 18px;
+    }
+    .p-ringkasan {
+        font-size: 14px;
+    }
+    .h-ringkasan {
+        font-size: 14px;
+    }
+    .ringkasan-desc {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .regis-nav1 {
+        display: none;
+    }
 }
