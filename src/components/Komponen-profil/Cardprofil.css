@@ -56,8 +56,8 @@ input:focus {
   }
 
 .block {
-    position: absolute;
-    top: 39%;
+    position: relative;
+    top: 10px;
     transform: translateY(-50%);
     color: #777;
     font-size: 16px;
@@ -65,6 +65,7 @@ input:focus {
     transition: 0.3s ease all;
     background-color: white;
     padding: 0 4px;
+    z-index: 1px;
 }
 
   /* Floating label ketika input focus atau ada isi */
@@ -84,12 +85,15 @@ input:not(:placeholder-shown) + .block {
     flex-direction: row;
     gap: 16px;
     width: 50%;
+    height: 42px;
 }
 
 .kode {
     width: 15%;
     border: 1px solid #777;
     border-radius: 4px;
+    position: relative;
+    top: 20px;
 }
 
 .btn-simpan {
@@ -118,4 +122,48 @@ input:not(:placeholder-shown) + .block {
     font-family: 'DM Sans';
     font-weight: 400;
     font-size: 18px;
+}
+.pass-profil {
+    display: none;
+}
+
+@media screen and (max-width: 500px), screen and (max-width: 350px), screen and (max-width: 700px)
+{
+    .profile-container {
+        width: 100%;
+        padding: 20px;
+        gap: 20px;
+    }
+    .profile-picture {
+        width: 60px;
+        height: 60px;
+    }
+    .p1card {
+        font-size: 16px;
+    }
+    .p2card {
+        font-size: 16px;
+    }
+    .ganti-foto {
+        font-size: 16px;
+    }
+    .profile-info {
+        gap: 5px;
+    }
+    .profile-form {
+        flex-direction: column;
+    }
+    .phone-input {
+        width: 50%;
+    }
+    .phone-input {
+        width: 100%;
+    }
+    .block {
+        position: relative;
+        top:  10px;
+    }
+    .pass-profil {
+        display: block;
+    }
 }

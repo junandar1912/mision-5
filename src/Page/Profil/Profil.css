@@ -113,3 +113,14 @@
 footer {
   display: block;
 }
+
+@media screen and (max-width: 500px), screen and (max-width: 350px), screen and (max-width: 700px)
+{
+  .container-cardprofil {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .data-profil {
+    width: 100%;
+  }
+}

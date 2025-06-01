@@ -9,6 +9,10 @@ const Cardprofile = () => {
   const [Email, setEmail] = useState(user?.Email || '');
   const [phone, setPhone] = useState(user?.phone || '');
   const [photo, setPhoto] = useState(user?.photo || '')
+  const [password, setPassword] = useState('');
+  const [konfirmasi, setKonfirmasi] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [showKonfirmasi, setShowKonfirmasi] = useState(false);
   const fileInputRef = useRef(null)
 
   const handleSave = () => {
@@ -67,6 +71,29 @@ const Cardprofile = () => {
             <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder='NO. HP'/>
           </div>
         </div>
+         <div className='pass-profil'>
+            <div className='div-pas'>
+              <label htmlFor="password" className='block'>Password</label>
+              <div className='password'>
+                <input  type={showPassword ? 'text' : 'password'} id='pass' value={password}
+                    onChange={(e) => setPassword(e.target.value)}/>
+                <span className='password-regis' onClick={() => setShowPassword(!showPassword)}>
+                  <i className={`fas ${showPassword ? 'fa-eye' : 'fa-eye-slash'}`}></i>
+                  </span>
+              </div>
+            </div>
+            <div className='div-konfir'>
+              <label htmlFor="konfir" className='block'>Konfirmasi Password</label>
+              <div className='konfirmasi'>
+                <input id='konfir' value={konfirmasi}
+                    onChange={(e) => setKonfirmasi(e.target.value)}  type={showKonfirmasi ? 'text' : 'password'}/>
+                <span className='password-regis'
+                    onClick={() => setShowKonfirmasi(!showKonfirmasi)}>
+                  <i className={`fas ${showKonfirmasi ? 'fa-eye' : 'fa-eye-slash'}`}></i>
+                  </span>
+              </div>
+            </div>
+          </div>
       </main>
       <button className="btn-simpan" onClick={handleSave}>Simpan</button>
     </div>
