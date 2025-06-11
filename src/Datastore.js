@@ -8,7 +8,7 @@ const defaultAvatar = "../src/assets/gambar/avatar/avatar(1).svg";
 // Di sini kita juga pastikan kalau user tidak punya photo, kita set photo default
 const getInitialUser = () => {
   try {
-    const user = JSON.parse(localStorage.getItem('registeredUser'));
+    const user = JSON.parse(localStorage.getItem('registrasiUser'));
     if (user) {
       // **Jika user ada tapi belum punya photo, set photo default**
       if (!user.photo) {
@@ -29,27 +29,24 @@ const Datastore = create((set) => ({
   isLoggedIn: !!getInitialUser(),
 
   setUser: (userData) => {
-    localStorage.setItem('registeredUser', JSON.stringify(userData));
+    localStorage.setItem('registrasiUser', JSON.stringify(userData));
     set({ user: userData, isLoggedIn: true });
   },
 
-  // Fungsi updateUser diperbaiki supaya:
-  // - Jika photo tidak dikirim di update, photo lama tetap dipakai
-  // - Jika photo kosong atau null, tetap gunakan photo lama atau default avatar
   updateUser: (updates) =>
     set((state) => {
       const currentUser = state.user || {};
       const updatedUser = {
         ...currentUser,
         ...updates,
-        photo: updates.photo || currentUser.photo || defaultAvatar,  // <<< Perubahan utama di sini
+        photo: updates.photo || currentUser.photo || defaultAvatar,
       };
-      localStorage.setItem('registeredUser', JSON.stringify(updatedUser));
+      localStorage.setItem('registrasiUser', JSON.stringify(updatedUser));
       return { user: updatedUser };
     }),
 
   clearUser: () => {
-    localStorage.removeItem('registeredUser');
+    localStorage.removeItem('registrasiUser');
     set({ user: null, isLoggedIn: false });
   },
 
