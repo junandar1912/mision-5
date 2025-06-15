@@ -19,7 +19,7 @@ const Login = () => {
 
   const handleLogin = () => {
     if (!validateEmail(Email)) {
-      setError('Email format is invalid.');
+      setError('Email format is invalid.');// tombol login validasi 
       return;
     }
 
@@ -28,7 +28,7 @@ const Login = () => {
       return;
     }
 
-    const savedUser = JSON.parse(localStorage.getItem('registrasiUser'));
+    const savedUser = JSON.parse(localStorage.getItem('registrasiUser'));  // data save user
 
     if (savedUser) {
       if (savedUser.Email === Email && savedUser.password === password) {
@@ -43,10 +43,10 @@ const Login = () => {
   };
 
   const handleDaftar = () => {
-    navigate('/registrasi');
+    navigate('/registrasi'); // handle alamat ke regitrasi
   };
 
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([]); // Api
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

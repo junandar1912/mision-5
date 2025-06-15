@@ -83,16 +83,15 @@
 }
 
 .nav {
-    display: flex;
-    flex-direction: row;
-    width: 612px;
-    height: 52px;
-    gap: 5%;
+    display: inline-flex;
+    height: 40px;
+    gap: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 a {
+    display: inline;
     text-decoration: none;
     color: #333333AD;
     font-family: "DM Sans";
@@ -243,10 +242,6 @@ a:focus {
     .btn-p {
         width: 100%;
         font-size: 14px;
-    }
-
-    .nav {
-        display: inline-flex;
     }
 
     .draft ul {
