@@ -28,7 +28,7 @@ const Datastore = create((set) => ({
   user: getInitialUser(),
   isLoggedIn: !!getInitialUser(),
 
-  setUser: (userData) => {
+  setUser: (userData) => { // user data
     localStorage.setItem('registrasiUser', JSON.stringify(userData));
     set({ user: userData, isLoggedIn: true });
   },
@@ -36,7 +36,7 @@ const Datastore = create((set) => ({
   updateUser: (updates) =>
     set((state) => {
       const currentUser = state.user || {};
-      const updatedUser = {
+      const updatedUser = { // update
         ...currentUser,
         ...updates,
         photo: updates.photo || currentUser.photo || defaultAvatar,
@@ -45,7 +45,7 @@ const Datastore = create((set) => ({
       return { user: updatedUser };
     }),
 
-  clearUser: () => {
+  clearUser: () => {  // menghapus user
     localStorage.removeItem('registrasiUser');
     set({ user: null, isLoggedIn: false });
   },

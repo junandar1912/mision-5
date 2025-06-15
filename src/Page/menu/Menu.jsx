@@ -9,10 +9,10 @@ import './Menu.css';
 const Menu = () => {
   const navigate = useNavigate();
   const [cardData, setCardData] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const cardsPerPage = 9;
+  const [currentPage, setCurrentPage] = useState(1); // tombol sekarang
+  const cardsPerPage = 9; //jumlah kartu dalam satu tombol
 
-  useEffect(() => {
+  useEffect(() => { // Api
     const fetchData = async () => {
       try {
         const data = await getData();
@@ -25,7 +25,7 @@ const Menu = () => {
     fetchData();
   }, []);
 
-  const indexOfLastCard = currentPage * cardsPerPage;
+  const indexOfLastCard = currentPage * cardsPerPage;  //page
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
   const currentCards = cardData.slice(indexOfFirstCard, indexOfLastCard);
 
@@ -70,8 +70,8 @@ const Menu = () => {
           </div>
           <div className='draft'>
             <ul>
-              {currentCards.map((item) => (
-                <li key={item.id} onClick={() => navigate('/Detail')}>
+              {currentCards.map((item, index) => (
+                <li key={index} onClick={() => navigate('/Detail')}>
                   <Card
                     image={item.image}
                     title={item.title}

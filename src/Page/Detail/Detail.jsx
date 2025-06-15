@@ -5,6 +5,7 @@ import Footer from '../../components/Footer/Footer'
 import './Detail.css'
 import Carddes from '../../components/Carddesc/Carddes'
 import { useNavigate } from 'react-router-dom';
+import { getData } from '../../Api'
 
 
 const Carddesdata = [{
@@ -15,49 +16,14 @@ const Carddesdata = [{
   terlihat: true
 }]
 
-const cardData = [
-  {
-  image:"../src/assets/gambar/photo 1.svg",
-  title:"Big 4 Auditor Financial Analyst ",
-  description:"Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
-  avatar:"../src/assets/gambar/avatar/avatar(1).svg",
-  instructor:"Jenna Ortega",
-  rating:"3,5",
-  reviews:"86",
-  price:"RP 300K",
-  job:"Senior Accountant"
-},
-{
-  image:"../src/assets/gambar/photo 1.svg",
-  title:"Big 4 Auditor Financial Analyst ",
-  description:"Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
-  avatar:"../src/assets/gambar/avatar/avatar(1).svg",
-  instructor:"Jenna Ortega",
-  rating:"3,5",
-  reviews:"86",
-  price:"RP 300K",
-  job:"Senior Accountant"
-},
-{
-  image:"../src/assets/gambar/photo 1.svg",
-  title:"Big 4 Auditor Financial Analyst ",
-  description:"Mulai transformasi dengan instruktur profesional, harga yang terjangkau, dan  kurikulum terbaik",
-  avatar:"../src/assets/gambar/avatar/avatar(1).svg",
-  instructor:"Jenna Ortega",
-  rating:"3,5",
-  reviews:"86",
-  price:"RP 300K",
-  job:"Senior Accountant"
-},
-]
-
 
 const Detail = () => {
 
   const navigate = useNavigate()
   const [openDropdownId, setOpenDropdownId] = useState(null);
+  const [cardData, setCardData] = useState([]);
   
-  const toggleDropdown = (id) => {
+  const toggleDropdown = (id) => { // tombol dropdown
     setOpenDropdownId(prev => (prev === id ? null : id));
   };
 
@@ -71,6 +37,20 @@ const Detail = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
   
+  // sinkronisasi api
+
+   useEffect(() => { // Api
+      const fetchData = async () => {
+        try {
+          const data = await getData();
+          setCardData(data);
+        } catch (error) {
+          console.error('Gagal memuat data', error);
+        }
+      };
+  
+      fetchData();
+    }, []);
 
   return (
     <>
@@ -350,7 +330,7 @@ const Detail = () => {
         <p className='p-desc-produk'>Ekspansi Pengetahuan Anda dengan Rekomendasi Spesial Kami!</p>
         <div>
           <ul className='produk-lain'>
-            {cardData.map((item,index)=> (
+            {cardData.slice(0, 4).map((item,index)=> (
               <li key={index}>
                 <Card
                   image={item.image}
