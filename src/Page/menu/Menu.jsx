@@ -4,7 +4,6 @@ import Footer from '../../components/Footer/Footer.jsx'
 import Card from '../../components/Card/Card.jsx'
 import { useNavigate } from 'react-router'
 import { getData } from '../../Api.js' 
-import axios from 'axios'
 import './Menu.css'
 
 
@@ -14,6 +13,8 @@ const Menu = () => {
 
   const navigate = useNavigate()
   const [cardData, setCardData] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const cardsPerPage = 9;
 
   useEffect (() => {
     const fetchData = async () => {
@@ -29,6 +30,20 @@ const Menu = () => {
     fetchData();
 
   }, []);
+
+   const indexOfLastCard = currentPage * cardsPerPage;  // untuk page tombol
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+  const currentCards = cardData.slice(indexOfFirstCard, indexOfLastCard);
+
+  const totalPages = Math.ceil(cardData.length / cardsPerPage);
+
+  const goToNextPage = () => {
+    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+  };
+
+  const goToPreviousPage = () => {
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
+  };
 
 
 
@@ -57,8 +72,8 @@ const Menu = () => {
           </div>
           <div className='draft'>
            <ul>
-            {cardData.map((item, index) => (
-              <li key={index} onClick={()=> navigate ('/Detail') }>
+            {currentCards.map((item) => (
+              <li key={item.id} onClick={()=> navigate ('/Detail') }>
               <Card
               image={item.image}
               title={item.title}
@@ -73,6 +88,15 @@ const Menu = () => {
               </li>
             ))}
            </ul>
+           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+        <button onClick={goToPreviousPage} disabled={currentPage === 1}>
+          ⬅ Sebelumnya
+        </button>
+        <p style={{ margin: '0 10px' }}>Halaman {currentPage} dari {totalPages}</p>
+        <button onClick={goToNextPage} disabled={currentPage === totalPages}>
+          Selanjutnya ➡
+        </button>
+      </div>
           </div>
         </div>
         <div className='footer-container12'>
